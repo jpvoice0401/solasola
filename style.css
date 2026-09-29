@@ -390,7 +390,7 @@ img {
 
 .hero-art-section {
   position: relative;
-  min-height: 84vh;
+  min-height: 96vh;
   background-color: var(--bg-dark);
   color: #ffffff;
   display: flex;
@@ -405,7 +405,7 @@ img {
     linear-gradient(to right, rgba(18, 18, 18, 0.92) 0%, rgba(18, 18, 18, 0.7) 50%, rgba(18, 18, 18, 0.38) 100%),
     url('assets/images/박영근시비_앞면.jpg');
   background-size: cover;
-  background-position: center 45%;
+  background-position: center 65%;
   z-index: 1;
   filter: brightness(0.88) contrast(1.08);
   transform: scale(1.02);
@@ -419,7 +419,7 @@ img {
   grid-template-columns: 1.32fr 0.68fr;
   gap: 52px;
   align-items: center;
-  padding: 60px 0 95px;
+  padding: 80px 0 140px;
 }
 
 .hero-foundation-tag {

@@ -402,12 +402,12 @@ img {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(18, 18, 18, 0.92) 0%, rgba(18, 18, 18, 0.7) 50%, rgba(18, 18, 18, 0.4) 100%),
-    url('assets/images/솔아문학예술관.png');
+    linear-gradient(to right, rgba(18, 18, 18, 0.92) 0%, rgba(18, 18, 18, 0.7) 50%, rgba(18, 18, 18, 0.38) 100%),
+    url('assets/images/박영근시비_앞면.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center 45%;
   z-index: 1;
-  filter: brightness(0.85) contrast(1.1);
+  filter: brightness(0.88) contrast(1.08);
   transform: scale(1.02);
   transition: transform 8s ease-out;
 }

@@ -61,6 +61,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -419,7 +420,7 @@ img {
   inset: 0;
   background-image: 
     linear-gradient(to right, rgba(16, 18, 22, 0.94) 0%, rgba(16, 18, 22, 0.72) 32%, rgba(16, 18, 22, 0.05) 52%, transparent 68%),
-    url('assets/images/박영근시비_앞면.jpg?v=20260929_v3');
+    url('assets/images/박영근시비_앞면.jpg?v=20260929_v4');
   background-size: cover;
   background-position: left center;
   z-index: 1;
@@ -2653,7 +2654,7 @@ img {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1120px) {
   :root {
     --header-height: 76px;
   }
@@ -2666,18 +2667,42 @@ img {
     display: block;
   }
 
+  .hero-art-section {
+    min-height: auto;
+    padding-top: var(--header-height);
+  }
+
+  .hero-art-bg {
+    background-position: center center;
+    background-image: 
+      linear-gradient(to bottom, rgba(16, 18, 22, 0.94) 0%, rgba(16, 18, 22, 0.78) 45%, rgba(16, 18, 22, 0.94) 100%),
+      url('assets/images/박영근시비_앞면.jpg?v=20260929_v4');
+  }
+
   .hero-art-content {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 60px 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 48px;
+    padding: 60px 0 80px;
   }
 
   .hero-main-title {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
+  }
+
+  .hero-art-card {
+    max-width: 520px;
+    width: 100%;
+    margin: 0 auto;
+    align-self: center;
   }
 
   .space-curation-grid {
     grid-template-columns: 1fr;
+  }
+
+  .museum-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .space-photo-gallery {
@@ -2729,6 +2754,53 @@ img {
     padding: 0 20px;
   }
 
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .brand-logo {
+    gap: 8px;
+  }
+
+  .brand-calligraphy-pure,
+  .brand-calligraphy-wrap {
+    height: 30px;
+  }
+
+  .brand-text-block {
+    width: 104px;
+    gap: 2px;
+  }
+
+  .brand-kr-sub-large {
+    font-size: 0.68rem;
+  }
+
+  .nav-utilities {
+    gap: 8px;
+  }
+
+  .search-trigger-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .btn-header-support {
+    padding: 6px 11px;
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+  }
+
+  .mobile-menu-btn {
+    font-size: 1.25rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .museum-pillars-grid {
     grid-template-columns: 1fr;
   }
@@ -2745,8 +2817,79 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .hero-art-section .container {
+    padding: 0 20px;
+  }
+
+  .hero-art-content {
+    padding: 40px 0 60px;
+    gap: 36px;
+  }
+
   .hero-main-title {
-    font-size: 2.1rem;
+    font-size: 1.95rem;
+    line-height: 1.35;
+    margin-bottom: 16px;
+  }
+
+  .hero-title-en {
+    font-size: 1.0rem;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+
+  .hero-quote-lead {
+    margin-bottom: 24px;
+    padding-left: 14px;
+  }
+
+  .hero-lead-ko {
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+
+  .hero-lead-en {
+    font-size: 0.82rem;
+    line-height: 1.55;
+  }
+
+  .hero-buttons-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn-foundation-solid,
+  .btn-foundation-outline {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.86rem;
+  }
+
+  .hero-art-card {
+    max-width: 100%;
+    margin: 0;
+    align-self: stretch;
+  }
+
+  .hero-poet-visual-frame {
+    height: 210px;
+  }
+
+  .hero-art-card-body {
+    padding: 22px 18px;
+  }
+
+  .hero-card-poem-title {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+  }
+
+  .hero-poem-stanza {
+    font-size: 0.94rem;
+    line-height: 1.7;
   }
 
   .section-main-heading {
@@ -2825,6 +2968,89 @@ img {
   .poet-chrono-desc {
     font-size: 0.91rem;
     line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+
+  .brand-calligraphy-pure,
+  .brand-calligraphy-wrap {
+    height: 30px;
+  }
+
+  .brand-text-block {
+    width: 104px;
+    gap: 2.5px;
+  }
+
+  .brand-kr-sub-large {
+    font-size: 0.68rem;
+  }
+
+  .nav-utilities {
+    gap: 8px;
+  }
+
+  .search-trigger-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+
+  .btn-header-support {
+    padding: 6px 11px;
+    font-size: 0.74rem;
+    letter-spacing: 0.04em;
+  }
+
+  .mobile-menu-btn {
+    font-size: 1.2rem;
+  }
+
+  .hero-foundation-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    margin-bottom: 14px;
+  }
+
+  .hero-main-title {
+    font-size: 1.72rem;
+    line-height: 1.34;
+  }
+
+  .hero-title-en {
+    font-size: 0.92rem;
+    margin-top: 8px;
+  }
+
+  .hero-lead-ko {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  .hero-lead-en {
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .hero-poet-visual-frame {
+    height: 190px;
+  }
+
+  .hero-art-card-body {
+    padding: 18px 16px;
+  }
+
+  .hero-card-poem-title {
+    font-size: 1.15rem;
+  }
+
+  .hero-poem-stanza {
+    font-size: 0.88rem;
+    line-height: 1.65;
   }
 }
 

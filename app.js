@@ -1095,9 +1095,9 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
-            <div class="visual-gallery-card" data-lightbox="assets/images/박지현.jpg" data-caption="박지현 갤러리 생태·현대미술 기획전 (2층)">
+            <div class="visual-gallery-card" data-lightbox="assets/images/솔아문학예술관.png" data-caption="박지현 갤러리 생태·현대미술 기획전 (2층)">
               <div class="visual-img-container" style="height: 240px;">
-                <img src="assets/images/박지현.jpg" alt="박지현 갤러리" onerror="this.src='assets/images/아이콘.png'">
+                <img src="assets/images/솔아문학예술관.png" alt="박지현 갤러리" onerror="this.src='assets/images/sola_building_facade.png'">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>
               <div class="visual-card-body">
@@ -1116,7 +1116,7 @@ function getSubpageHTML(main, sub) {
                 1층 문학관 전시 안내
               </h4>
               <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.8;">
-                박영근 시인이 생전 사용하던 만년필과 육필 노트, 구치소에서 집필한 원고 묶음, 1984년 초판 『취업공고판 앞에서』부터 2007년 유고시집까지 실물 전시를 관람하실 수 있습니다.
+                1984년 첫 시집 『취업공고판 앞에서』부터 2007년 유고시집까지 박영근 시인의 주요 저작들과 생애를 기리는 문학적 기록 및 실물 전시를 관람하실 수 있습니다.
               </p>
             </div>
 
@@ -1295,9 +1295,9 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
-            <div class="visual-gallery-card" data-lightbox="assets/images/박지현.jpg" data-caption="박지현 갤러리 생태미술 전시실">
-              <div class="visual-img-container" style="background: #ffffff;">
-                <img src="assets/images/박지현.jpg" alt="박지현 갤러리" onerror="this.src='assets/images/아이콘.png'">
+            <div class="visual-gallery-card" data-lightbox="assets/images/솔아문학예술관.png" data-caption="박지현 갤러리 생태미술 전시실">
+              <div class="visual-img-container" style="background: #ffffff; height: 240px;">
+                <img src="assets/images/솔아문학예술관.png" alt="박지현 갤러리" onerror="this.src='assets/images/sola_building_facade.png'">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>
               <div class="visual-card-body">

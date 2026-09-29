@@ -1262,16 +1262,16 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
-            <!-- 3. 솔아문학 공식 심볼 (순서 변경: 3번째 위치) -->
-            <div class="visual-gallery-card" data-lightbox="assets/images/솔아.png" data-caption="솔아문학예술 공식 엠블럼">
+            <!-- 3. 솔아문학예술 공식 워드마크 -->
+            <div class="visual-gallery-card" data-lightbox="assets/images/솔아.png" data-caption="솔아문학예술 공식 워드마크">
               <div class="visual-img-container" style="background: #ffffff;">
-                <img src="assets/images/솔아.png" alt="솔아 엠블럼" style="object-fit: contain; padding: 20px;">
+                <img src="assets/images/솔아.png" alt="솔아문학예술 공식 워드마크" style="object-fit: contain; padding: 20px;">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>
               <div class="visual-card-body">
                 <div class="visual-card-tag">IDENTITY</div>
-                <div class="visual-card-title">솔아문학 공식 심볼</div>
-                <div class="visual-card-desc">푸른 소나무와 붓을 형상화한 로고마크</div>
+                <div class="visual-card-title">솔아문학예술 공식 워드마크</div>
+                <div class="visual-card-desc">“넘치는 그리움으로 강물 저어 가네” 캘리그래피 워드마크</div>
               </div>
             </div>
 

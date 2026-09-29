@@ -419,7 +419,7 @@ img {
   inset: 0;
   background-image: 
     linear-gradient(to right, rgba(16, 18, 22, 0.94) 0%, rgba(16, 18, 22, 0.72) 32%, rgba(16, 18, 22, 0.05) 52%, transparent 68%),
-    url('assets/images/박영근시비_앞면.jpg?v=20260929_pure');
+    url('assets/images/박영근시비_앞면.jpg?v=20260929_v3');
   background-size: cover;
   background-position: left center;
   z-index: 1;

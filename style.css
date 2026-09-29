@@ -11,7 +11,7 @@
   --bg-subtle: #f8f8f7;
   --bg-dark: #121212;
   --bg-dark-surface: #1e1e1e;
-  
+
   --text-primary: #111111;
   --text-secondary: #555555;
   --text-muted: #888888;
@@ -37,7 +37,7 @@
   --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.05);
   --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.08);
   --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
-  
+
   --tr-fast: 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
   --tr-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -50,7 +50,9 @@
 }
 
 /* Reset & Global */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -72,7 +74,16 @@ body {
   overflow-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a, div {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+div {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
@@ -209,14 +220,17 @@ img {
 }
 
 @media (max-width: 768px) {
+
   .brand-calligraphy-pure,
   .brand-calligraphy-wrap {
     height: 34px;
   }
+
   .brand-text-block {
     width: 120px;
     gap: 3px;
   }
+
   .brand-kr-sub-large {
     font-size: 0.76rem;
   }
@@ -265,11 +279,13 @@ img {
   transition: width var(--tr-fast);
 }
 
-.nav-link:hover, .nav-item.active .nav-link {
+.nav-link:hover,
+.nav-item.active .nav-link {
   color: var(--text-primary);
 }
 
-.nav-link:hover::after, .nav-item.active .nav-link::after {
+.nav-link:hover::after,
+.nav-item.active .nav-link::after {
   width: 100%;
 }
 
@@ -391,7 +407,7 @@ img {
 .hero-art-section {
   position: relative;
   min-height: 96vh;
-  background-color: var(--bg-dark);
+  background-color: #ffffff;
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -402,13 +418,13 @@ img {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(18, 18, 18, 0.92) 0%, rgba(18, 18, 18, 0.7) 50%, rgba(18, 18, 18, 0.38) 100%),
+    linear-gradient(to right, rgba(16, 18, 22, 0.94) 0%, rgba(16, 18, 22, 0.72) 32%, rgba(16, 18, 22, 0.05) 52%, transparent 68%),
     url('assets/images/박영근시비_앞면.jpg');
   background-size: cover;
-  background-position: center 65%;
+  background-position: left center;
   z-index: 1;
-  filter: brightness(0.88) contrast(1.08);
-  transform: scale(1.02);
+  filter: brightness(0.98) contrast(1.02);
+  transform: scale(1.01);
   transition: transform 8s ease-out;
 }
 
@@ -445,7 +461,8 @@ img {
 
 .hero-main-title {
   font-family: var(--font-serif);
-  font-size: 3.1rem; /* 80% scale refinement */
+  font-size: 3.1rem;
+  /* 80% scale refinement */
   font-weight: 800;
   line-height: 1.42;
   letter-spacing: -0.02em;
@@ -543,12 +560,12 @@ img {
 
 /* Hero Right: Exhibition / Poet Card */
 .hero-art-card {
-  background: rgba(20, 20, 24, 0.45);
+  background: rgba(20, 20, 24, 0.78);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
   max-width: 430px;
   width: 100%;
   justify-self: end;
@@ -899,7 +916,8 @@ img {
   transition: all var(--tr-fast);
 }
 
-.space-select-card:hover, .space-select-card.active {
+.space-select-card:hover,
+.space-select-card.active {
   border-color: var(--text-primary);
   box-shadow: var(--shadow-subtle);
 }
@@ -1036,7 +1054,8 @@ img {
 
 .poetry-title-large {
   font-family: var(--font-serif);
-  font-size: 2.1rem; /* 80% refinement */
+  font-size: 2.1rem;
+  /* 80% refinement */
   font-weight: 900;
   color: var(--text-primary);
   margin-bottom: 14px;
@@ -1553,7 +1572,8 @@ img {
 
 .subpage-title-main {
   font-family: var(--font-serif);
-  font-size: 2.4rem; /* 80% scale */
+  font-size: 2.4rem;
+  /* 80% scale */
   font-weight: 900;
   color: var(--text-primary);
   margin-bottom: 10px;
@@ -1658,6 +1678,7 @@ img {
     grid-template-columns: 1fr !important;
     gap: 20px;
   }
+
   .photo-archive-grid .visual-img-container {
     height: 280px !important;
   }
@@ -1951,6 +1972,7 @@ img {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -2218,7 +2240,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: none !important; /* Eliminate all drop shadow artifacts that cause messy section divisions */
+  box-shadow: none !important;
+  /* Eliminate all drop shadow artifacts that cause messy section divisions */
   transition: border-color var(--tr-fast), background-color var(--tr-fast);
 }
 
@@ -2600,21 +2623,26 @@ img {
   .section-main-heading {
     white-space: normal;
   }
+
   .section-header-desc {
     white-space: normal;
     text-align: left;
   }
+
   .gallery-section-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
+
   .museum-pillars-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .evolution-cards-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .heritage-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2624,53 +2652,68 @@ img {
   :root {
     --header-height: 76px;
   }
+
   .nav-menu {
     display: none;
   }
+
   .mobile-menu-btn {
     display: block;
   }
+
   .hero-art-content {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 60px 0;
   }
+
   .hero-main-title {
     font-size: 2.6rem;
   }
+
   .space-curation-grid {
     grid-template-columns: 1fr;
   }
+
   .space-photo-gallery {
     height: 400px;
     min-height: auto;
   }
+
   .poetry-gallery-frame {
     grid-template-columns: 1fr;
   }
+
   .poetry-sidebar {
     position: static;
   }
+
   .poetry-curation-col {
     position: static;
   }
+
   .poetry-columns-grid {
     grid-template-columns: 1fr;
   }
+
   .dual-showcase-grid {
     grid-template-columns: 1fr;
   }
+
   .museum-support-frame {
     grid-template-columns: 1fr;
     padding: 40px 24px;
   }
+
   .footer-top-row {
     grid-template-columns: 1fr 1fr;
   }
+
   .poet-bio-grid {
     grid-template-columns: 260px 1fr;
     gap: 32px;
   }
+
   .poet-books-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2680,30 +2723,39 @@ img {
   .container {
     padding: 0 20px;
   }
+
   .museum-pillars-grid {
     grid-template-columns: 1fr;
   }
+
   .evolution-cards-grid {
     grid-template-columns: 1fr;
   }
+
   .heritage-grid {
     grid-template-columns: 1fr;
   }
+
   .books-grid-row {
     grid-template-columns: 1fr;
   }
+
   .hero-main-title {
     font-size: 2.1rem;
   }
+
   .section-main-heading {
     font-size: 1.8rem;
   }
+
   .poetry-stage-view {
     padding: 28px 20px;
   }
+
   .footer-top-row {
     grid-template-columns: 1fr;
   }
+
   .footer-bottom-copy {
     flex-direction: column;
     gap: 12px;
@@ -2715,46 +2767,56 @@ img {
     margin-top: 40px;
     margin-bottom: 20px;
   }
+
   .subpage-section-title {
     font-size: 1.25rem;
   }
+
   .poet-bio-panorama-frame {
     height: 320px;
     margin-bottom: 24px;
   }
+
   .poet-panorama-overlay {
     padding: 16px 20px 14px;
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
   }
+
   .poet-bio-meta-row-clean {
     grid-template-columns: 1fr;
     gap: 18px;
     padding: 18px 20px;
   }
+
   .poet-bio-meta-row {
     grid-template-columns: 1fr;
     gap: 4px;
   }
+
   .poet-books-grid {
     grid-template-columns: 1fr;
     gap: 16px;
     margin-bottom: 36px;
   }
+
   .poet-chronology-flow {
     padding-left: 24px;
     margin-left: 6px;
   }
+
   .poet-chrono-dot {
     left: -30px;
     width: 10px;
     height: 10px;
     top: 7px;
   }
+
   .poet-chrono-year {
     font-size: 1.08rem;
   }
+
   .poet-chrono-desc {
     font-size: 0.91rem;
     line-height: 1.7;
@@ -2769,6 +2831,7 @@ img {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
   }
+
   .unified-visit-hero {
     grid-template-columns: 1fr !important;
   }
@@ -2779,21 +2842,26 @@ img {
     padding: 24px 0 16px 0 !important;
     margin-bottom: 20px !important;
   }
+
   .subpage-title-main {
     font-size: 1.85rem !important;
   }
+
   .subpage-lead-desc {
     font-size: 0.98rem !important;
     line-height: 1.6 !important;
   }
+
   .subpage-tab-strip {
     gap: 8px !important;
     margin-bottom: 24px !important;
   }
+
   .subpage-tab-item {
     padding: 8px 14px !important;
     font-size: 0.85rem !important;
   }
+
   .full-canvas-wrapper {
     padding: 0 16px !important;
   }
@@ -2806,11 +2874,13 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 32px;
 }
+
 .space-annex-details-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
 }
+
 .profile-responsive-grid {
   display: grid;
   grid-template-columns: 190px 1fr;
@@ -2831,21 +2901,25 @@ img {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
   }
+
   .space-annex-details-grid {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
   }
+
   .profile-responsive-grid {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
     text-align: center !important;
   }
+
   .founder-profile-info {
     height: auto !important;
     gap: 16px !important;
     text-align: left !important;
   }
-  .profile-responsive-grid > div:last-child {
+
+  .profile-responsive-grid>div:last-child {
     text-align: left !important;
   }
 }
@@ -2859,12 +2933,14 @@ img {
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
 }
+
 @media (max-width: 900px) {
   .space-specs-strip {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 20px !important;
   }
 }
+
 @media (max-width: 520px) {
   .space-specs-strip {
     grid-template-columns: 1fr !important;

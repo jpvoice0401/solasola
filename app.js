@@ -1271,7 +1271,9 @@ function getSubpageHTML(main, sub) {
               <div class="visual-card-body">
                 <div class="visual-card-tag">IDENTITY</div>
                 <div class="visual-card-title">솔아문학예술 공식 워드마크</div>
-                <div class="visual-card-desc">“넘치는 그리움으로 강물 저어 가네” 캘리그래피 워드마크</div>
+                <div class="visual-card-desc" style="line-height: 1.7; word-break: keep-all;">
+                  소나무의 강직한 기상과 문학의 서정적 흐름을 붓글씨의 힘찬 필맥으로 형상화한 공식 로고타입. 거침없이 뻗어나가는 필획을 통해 강물을 저어 가듯 시대와 시대를 잇는 깊은 문학적 그리움과 예술혼을 표현합니다.
+                </div>
               </div>
             </div>
 

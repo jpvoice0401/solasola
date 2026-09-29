@@ -1126,7 +1126,7 @@ function getSubpageHTML(main, sub) {
                 2층 갤러리 기획전 안내
               </h4>
               <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.8;">
-                박지현 작가의 개념미술 20여 점과 함께 분기별 초대전 및 청년 작가 기획전이 상시 운영됩니다.
+                박지현 작가의 개념미술 20여 점과 함께<br>분기별 초대전 및 청년 작가 기획전이 상시 운영됩니다.
               </p>
             </div>
           </div>

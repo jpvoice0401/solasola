@@ -1239,7 +1239,7 @@ function getSubpageHTML(main, sub) {
             <!-- 1. 박영근 시인 초상화 (유종회 작가 作) -->
             <div class="visual-gallery-card" data-lightbox="assets/images/박영근_초상화_유종회.jpg" data-caption="박영근 시인 초상화 (유종회 작가 作) — 노동문학의 개척자를 넘어 서정과 산문, 생명의 깊이를 노래한 시인의 문학혼을 기리며">
               <div class="visual-img-container" style="height: 380px;">
-                <img src="assets/images/박영근_초상화_유종회.jpg" alt="박영근 시인 초상화 (유종회 작가 作)" style="object-fit: cover; object-position: center 25%;">
+                <img src="assets/images/박영근_초상화_유종회.jpg" alt="박영근 시인 초상화 (유종회 작가 作)" style="object-fit: cover; object-position: center center;">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>
               <div class="visual-card-body">
@@ -1251,7 +1251,22 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
-            <!-- 2. 솔아문학예술관 박영근 시비 -->
+            <!-- 2. 박영근과 친구들 (유종회 작가 作) -->
+            <div class="visual-gallery-card" data-lightbox="assets/images/박영근과_친구들_유종회.jpg" data-caption="박영근과 친구들 (유종회 작가 作) — 박영근 시인과 문화예술 동지들의 뜨거운 연대와 동행">
+              <div class="visual-img-container" style="height: 380px;">
+                <img src="assets/images/박영근과_친구들_유종회.jpg" alt="박영근과 친구들 (유종회 작가 作)" style="object-fit: cover; object-position: center center;">
+                <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              </div>
+              <div class="visual-card-body">
+                <div class="visual-card-tag">HISTORICAL ART</div>
+                <div class="visual-card-title">박영근과 친구들 (유종회 작가 作)</div>
+                <div class="visual-card-desc" style="line-height: 1.7; word-break: keep-all;">
+                  유종회 화백이 화폭에 담아낸 시인 박영근과 문화예술 동지들의 모습. 시대의 아픔 속에서도 문학적 신념과 우정을 함께 나누었던 예술인들의 깊은 연대와 동행을 그렸습니다.
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. 솔아문학예술관 박영근 시비 -->
             <div class="visual-gallery-card" data-lightbox="assets/images/시비2.jpg" data-caption="솔아문학예술관 박영근 시비 「새야 새야」 (후원: 남성 203 동창회 - 남성중학교 20회, 남성고등학교 23회)">
               <div class="visual-img-container" style="height: 380px;">
                 <img src="assets/images/시비2.jpg" alt="솔아문학예술관 박영근 시비" style="object-fit: cover; object-position: center center;">
@@ -1269,21 +1284,6 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
-            <!-- 3. 솔아문학예술 공식 워드마크 -->
-            <div class="visual-gallery-card" data-lightbox="assets/images/솔아.png" data-caption="솔아문학예술 공식 워드마크">
-              <div class="visual-img-container" style="background: #ffffff; height: 380px; display: flex; align-items: center; justify-content: center;">
-                <img src="assets/images/솔아.png" alt="솔아문학예술 공식 워드마크" style="object-fit: contain; max-height: 75%; padding: 24px;">
-                <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-              </div>
-              <div class="visual-card-body">
-                <div class="visual-card-tag">IDENTITY</div>
-                <div class="visual-card-title">솔아문학예술 공식 워드마크</div>
-                <div class="visual-card-desc" style="line-height: 1.7; word-break: keep-all;">
-                  소나무의 강직한 기상과 문학의 서정적 흐름을 붓글씨의 힘찬 필맥으로 형상화한 공식 로고타입. 거침없이 뻗어나가는 필획을 통해 강물을 저어 가듯 시대와 시대를 잇는 깊은 문학적 그리움과 예술혼을 표현합니다.
-                </div>
-              </div>
-            </div>
-
             <!-- 4. 솔아문학예술관 본관 -->
             <div class="visual-gallery-card" data-lightbox="assets/images/솔아문학예술관.png" data-caption="솔아문학예술관 본관 외관 전경">
               <div class="visual-img-container" style="height: 380px;">
@@ -1294,6 +1294,21 @@ function getSubpageHTML(main, sub) {
                 <div class="visual-card-tag">ARCHITECTURE</div>
                 <div class="visual-card-title">솔아문학예술관 본관</div>
                 <div class="visual-card-desc">전북특별자치도 부안군 변산면 산기길 10</div>
+              </div>
+            </div>
+
+            <!-- 5. 솔아문학예술 공식 워드마크 -->
+            <div class="visual-gallery-card" style="grid-column: 1 / -1;" data-lightbox="assets/images/솔아.png" data-caption="솔아문학예술 공식 워드마크">
+              <div class="visual-img-container" style="background: #ffffff; height: 320px; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/images/솔아.png" alt="솔아문학예술 공식 워드마크" style="object-fit: contain; max-height: 70%; padding: 20px;">
+                <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              </div>
+              <div class="visual-card-body">
+                <div class="visual-card-tag">IDENTITY</div>
+                <div class="visual-card-title">솔아문학예술 공식 워드마크</div>
+                <div class="visual-card-desc" style="line-height: 1.7; word-break: keep-all;">
+                  소나무의 강직한 기상과 문학의 서정적 흐름을 붓글씨의 힘찬 필맥으로 형상화한 공식 로고타입. 거침없이 뻗어나가는 필획을 통해 강물을 저어 가듯 시대와 시대를 잇는 깊은 문학적 그리움과 예술혼을 표현합니다.
+                </div>
               </div>
             </div>
 

@@ -3069,6 +3069,29 @@ img {
 }
 
 @media (max-width: 768px) {
+  /* Prevent unnatural line break gaps in prose and card descriptions on mobile */
+  .poet-bio-prose br,
+  .hero-quote-lead br,
+  .poet-book-desc br,
+  .heritage-desc br,
+  .space-card-desc br,
+  .evolution-step-features br,
+  .monument-desc-box br,
+  .subpage-lead-desc br {
+    display: none;
+  }
+
+  /* Preserve poetic verse line breaks */
+  .hero-poem-stanza br,
+  .poem-lines br,
+  .poet-poem-stanza br,
+  .poetry-stanza br,
+  .monument-stanza br,
+  .monument-poem-box br,
+  .poem-view-stanza br {
+    display: block !important;
+  }
+
   .subpage-header-minimal {
     padding: 24px 0 16px 0 !important;
     margin-bottom: 20px !important;

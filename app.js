@@ -780,16 +780,13 @@ function getSubpageHTML(main, sub) {
               </h3>
               <div class="poet-bio-prose">
                 <p style="margin-bottom: 14px;">
-                  1958년 전북 부안에서 태어난 박영근 시인은 부안 마포초등학교에 입학하여 익산 중앙초등학교,<br>
-                  남성중학교(23회)를 졸업하고 전주고 1학년 때 학업을 중단했습니다.
+                  1958년 전북 부안에서 태어난 박영근 시인은 부안 마포초등학교에 입학하여 익산 중앙초등학교, 남성중학교(23회)를 졸업하고 전주고 1학년 때 학업을 중단했습니다.
                 </p>
                 <p style="margin-bottom: 14px;">
-                  1974년 16세 나이로 상경하여 공장 노동자로 일하며 산업화 시대 노동 현장의 실상을 온몸으로 체험하였고<br>
-                  1981년 동인지 『반시』 6집과 『실천문학』 2호에 「수유리에서」 등을 발표하며 문단에 나왔습니다.
+                  1974년 16세 나이로 상경하여 공장 노동자로 일하며 산업화 시대 노동 현장의 실상을 온몸으로 체험하였고 1981년 동인지 『반시』 6집과 『실천문학』 2호에 「수유리에서」 등을 발표하며 문단에 나왔습니다.
                 </p>
                 <p style="margin-bottom: 0;">
-                  이후 제12회 신동엽창작기금과 제5회 백석문학상을 수상하였으며, 그의 대표작 「솔아 솔아 푸르른 솔아」는<br>
-                  시대의 어둠을 밝히는 노래로 널리 불리며 한국 민중문학사의 찬란한 금자탑이 되었습니다.
+                  이후 제12회 신동엽창작기금과 제5회 백석문학상을 수상하였으며, 그의 대표작 「솔아 솔아 푸르른 솔아」는 시대의 어둠을 밝히는 노래로 널리 불리며 한국 민중문학사의 찬란한 금자탑이 되었습니다.
                 </p>
               </div>
 
@@ -914,8 +911,7 @@ function getSubpageHTML(main, sub) {
         <div style="width: 100%;">
           <div style="background: var(--bg-subtle); border-left: 4px solid var(--accent-orange); padding: 22px 28px; margin-bottom: 36px; text-align: center;">
             <p style="font-size: 1.05rem; color: var(--text-primary); font-weight: 600; line-height: 1.8; margin: 0;">
-              노동의 현장에서 인간의 존엄을 묻고, 민중의 역사에서 공동체의 희망을 보았으며,<br>
-              고향과 자연을 거쳐 존재의 심연에 이른 박영근 시학의 5단계 발전사입니다.
+              노동의 현장에서 인간의 존엄을 묻고, 민중의 역사에서 공동체의 희망을 보았으며, 고향과 자연을 거쳐 존재의 심연에 이른 박영근 시학의 5단계 발전사입니다.
             </p>
           </div>
 
@@ -1002,9 +998,7 @@ function getSubpageHTML(main, sub) {
               솔아문학예술관 시비 — 「새야 새야 (백제 · 마지막 노래)」
             </h4>
             <p style="font-size: 0.98rem; color: var(--text-secondary); line-height: 2.05; word-break: keep-all; margin-bottom: 24px;">
-              전북 부안 변산 솔아문학예술관 야외 정원에 건립된 이 시비는 시인의 모교 남성 203 동창회(남성중 20회, 남성고 23회)의 뜻깊은 후원으로 세워졌습니다.<br>
-              동학농민혁명의 발상지 고부와 부안의 대지 위에 서린 민중의 한과 역사의 비장미를 녹여낸 명시 「새야 새야」<br>
-              (부제: 백제·마지막 노래)가 자연석에 정성껏 각석되어 문학관을 찾는 방문객들을 맞이합니다.
+              전북 부안 변산 솔아문학예술관 야외 정원에 건립된 이 시비는 시인의 모교 남성 203 동창회(남성중 20회, 남성고 23회)의 뜻깊은 후원으로 세워졌습니다. 동학농민혁명의 발상지 고부와 부안의 대지 위에 서린 민중의 한과 역사의 비장미를 녹여낸 명시 「새야 새야」(부제: 백제·마지막 노래)가 자연석에 정성껏 각석되어 문학관을 찾는 방문객들을 맞이합니다.
             </p>
             <div style="font-family: var(--font-serif); font-size: 1.02rem; color: var(--text-primary); line-height: 2.1; background: #ffffff; padding: 26px 30px; border: 1px solid var(--border-light); border-left: 4px solid var(--accent-gold); display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
               <div>

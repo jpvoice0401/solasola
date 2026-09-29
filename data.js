@@ -65,6 +65,7 @@ export const siteData = {
       icon: "fa-bullhorn",
       subItems: [
         { id: "notices", title: "공지사항 & 행사", enTitle: "Notice & Events", icon: "fa-newspaper" },
+        { id: "research-cafe", title: "솔아 문학·연구 커뮤니티", enTitle: "Literature & Research Cafe", icon: "fa-comments" },
         { id: "donation", title: "솔아 후원회 안내", enTitle: "Sponsorship & Membership", icon: "fa-hand-holding-heart" }
       ]
     }

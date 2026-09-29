@@ -402,6 +402,7 @@ function getSubtitleForRoute(main, sub) {
 
     // 4. COMMUNITY
     'notices': '솔아문학예술관 개관식(2026. 7. 17) 및 정기 문화행사·공지사항',
+    'research-cafe': '박영근 시학 연구와 계간 『솔아문학』 창작 담론을 실시간으로 나누는 열린 학술·문학 커뮤니티',
     'donation': '박영근 문학유산 보존과 청년 작가 창작 지원을 위한 솔아 후원회 안내'
   };
   return map[sub] || '솔아문학예술 공식 플랫폼';
@@ -1311,6 +1312,84 @@ function getSubpageHTML(main, sub) {
               </div>
             `).join('')}
           </div>
+        </div>
+      `;
+
+    case 'research-cafe':
+      return `
+        <div style="width: 100%;">
+          
+          <!-- Hero Banner for Research Cafe -->
+          <div style="border: 1px solid var(--border-light); background: var(--bg-subtle); padding: 48px 40px; margin-bottom: 36px; position: relative;">
+            <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 12px;">
+              <span style="font-family: var(--font-en); font-size: 0.78rem; font-weight: 800; color: #03C75A; background: #e8f9ee; padding: 4px 10px; border-radius: 2px; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 6px;">
+                <span style="font-weight: 900; font-size: 0.88rem;">N</span> NAVER CAFE
+              </span>
+              <span style="font-family: var(--font-en); font-size: 0.78rem; font-weight: 700; color: var(--accent-gold); letter-spacing: 0.12em; text-transform: uppercase;">
+                OPEN RESEARCH &amp; LITERATURE COMMUNITY
+              </span>
+            </div>
+
+            <h3 style="font-family: var(--font-serif); font-size: 1.85rem; color: var(--text-primary); margin-bottom: 16px;">
+              솔아 문학·연구 커뮤니티 (네이버 카페)
+            </h3>
+
+            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.85; max-width: 780px; margin-bottom: 24px; word-break: keep-all;">
+              본 카페는 기존의 박영근 추모 모임과 달리, <strong>박영근 시인의 시학·문학사 연구 성과를 실시간으로 기록·축적</strong>하고, <strong>계간 『솔아문학』의 신작과 문학적 담론을 작가·연구자·독자가 함께 나누는 열린 학술·창작 소통 광장</strong>입니다.
+            </p>
+
+            <!-- Action Button: Open Naver Cafe -->
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+              <a href="https://cafe.naver.com/solapark" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 10px; background: #03C75A; color: #ffffff; padding: 14px 28px; font-weight: 700; font-size: 0.98rem; text-decoration: none; border-radius: 2px; transition: all var(--tr-fast); box-shadow: 0 4px 14px rgba(3,199,90,0.28);" onmouseover="this.style.background='#02b150';" onmouseout="this.style.background='#03C75A';">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> 네이버 카페 바로가기 (cafe.naver.com/solapark)
+              </a>
+              <span style="font-size: 0.88rem; color: var(--text-muted);">
+                <i class="fa-solid fa-check" style="color: #03C75A; margin-right: 4px;"></i> 누구나 자유롭게 가입하여 연구 논고와 문학 글을 공유하실 수 있습니다.
+              </span>
+            </div>
+          </div>
+
+          <!-- Feature Cards Grid (3 Columns) -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px;">
+            
+            <div style="background: #ffffff; border: 1px solid var(--border-light); padding: 28px; display: flex; flex-direction: column;">
+              <div style="width: 44px; height: 44px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--accent-orange); font-size: 1.2rem; margin-bottom: 16px; border: 1px solid var(--border-light);">
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 10px;">
+                박영근 시학 실시간 연구
+              </h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin: 0; word-break: keep-all;">
+                박영근문학연구소와 함께 시인의 텍스트 비평, 부안 변산 서정 연구, 시대정신과 문학사적 연구 논고를 실시간으로 올리고 공유합니다.
+              </p>
+            </div>
+
+            <div style="background: #ffffff; border: 1px solid var(--border-light); padding: 28px; display: flex; flex-direction: column;">
+              <div style="width: 44px; height: 44px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--accent-pine); font-size: 1.2rem; margin-bottom: 16px; border: 1px solid var(--border-light);">
+                <i class="fa-solid fa-feather-pointed"></i>
+              </div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 10px;">
+                계간 『솔아문학』 담론장
+              </h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin: 0; word-break: keep-all;">
+                계간 『솔아문학』의 발간 소식과 신작 수록작 토론, 필진과 독자가 함께 소통하는 생생한 문학 현장의 목소리를 담습니다.
+              </p>
+            </div>
+
+            <div style="background: #ffffff; border: 1px solid var(--border-light); padding: 28px; display: flex; flex-direction: column;">
+              <div style="width: 44px; height: 44px; background: var(--bg-subtle); display: flex; align-items: center; justify-content: center; color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 16px; border: 1px solid var(--border-light);">
+                <i class="fa-solid fa-users-line"></i>
+              </div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.15rem; color: var(--text-primary); margin-bottom: 10px;">
+                작가 및 시민 참여 연대
+              </h4>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin: 0; word-break: keep-all;">
+                문학관 행사 후기, 문학 기행 기록, 청년 작가 및 회원들의 창작시와 문화예술 비평을 상시 게재하고 소통합니다.
+              </p>
+            </div>
+
+          </div>
+
         </div>
       `;
 

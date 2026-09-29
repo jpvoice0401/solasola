@@ -1209,7 +1209,7 @@ function getSubpageHTML(main, sub) {
                 계간 『솔아문학』 정기구독 및 신작 원고 투고
               </h4>
               <p style="font-size: 0.94rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 0; word-break: keep-all;">
-                계간 『솔아문학』은 시, 소설, 평론, 수필 등 당대 한국문학의 최전선에서 치열하게 사유하는 작가들의 신작을 상시 모집하며 정기구독 신청을 받고 있습니다.
+                계간 『솔아문학』은 시, 소설, 평론, 수필 등 당대 한국문학의 최전선에서<br>치열하게 사유하는 작가들의 신작을 상시 모집하며 정기구독 신청을 받고 있습니다.
               </p>
             </div>
             <div style="display: flex; flex-direction: column; gap: 12px; justify-content: center;">

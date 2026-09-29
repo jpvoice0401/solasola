@@ -726,7 +726,7 @@ export const siteData = {
       category: "연구총서",
       publisher: "도서출판 솔아",
       date: "2026",
-      cover: "아이콘.png",
+      cover: "솔아.png",
       group: "sola",
       desc: "박정근문학연구소 제1호 학술총서. 부안 4대 시인 계보와 박영근 시학 발전사 연구.",
       buyUrl: "mailto:sola_art@naver.com?subject=[연구총서 주문 문의]",

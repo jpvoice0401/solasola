@@ -417,15 +417,13 @@ img {
 .hero-art-bg {
   position: absolute;
   inset: 0;
-  background-color: #ffffff;
   background-image: 
-    linear-gradient(to right, rgba(14, 18, 24, 0.82) 0%, rgba(14, 18, 24, 0.50) 22%, rgba(14, 18, 24, 0.0) 36%, transparent 100%),
-    url('assets/images/솔아문학예술관_메인배경.jpg');
+    linear-gradient(to right, rgba(16, 18, 22, 0.94) 0%, rgba(16, 18, 22, 0.72) 32%, rgba(16, 18, 22, 0.05) 52%, transparent 68%),
+    url('assets/images/박영근시비_앞면.jpg');
   background-size: cover;
   background-position: left center;
-  background-repeat: no-repeat;
   z-index: 1;
-  filter: brightness(0.99) contrast(1.02);
+  filter: brightness(0.98) contrast(1.02);
   transform: scale(1.01);
   transition: transform 8s ease-out;
 }
@@ -434,7 +432,7 @@ img {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: minmax(360px, 520px) 1fr;
+  grid-template-columns: 1.32fr 0.68fr;
   gap: 52px;
   align-items: center;
   padding: 80px 0 140px;
@@ -461,10 +459,6 @@ img {
   background: var(--accent-gold);
 }
 
-.hero-art-text-col {
-  max-width: 530px;
-}
-
 .hero-main-title {
   font-family: var(--font-serif);
   font-size: 3.1rem;
@@ -474,7 +468,6 @@ img {
   letter-spacing: -0.02em;
   margin-bottom: 24px;
   color: #ffffff;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
   word-break: keep-all;
 }
 
@@ -485,8 +478,7 @@ img {
   font-weight: 400;
   letter-spacing: 0.12em;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.88);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  color: var(--text-light-muted);
   text-transform: uppercase;
   margin-top: 18px;
 }
@@ -506,8 +498,7 @@ img {
   font-size: 1.12rem;
   font-weight: 400;
   line-height: 1.8;
-  color: #ffffff;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+  color: rgba(255, 255, 255, 0.95);
   word-break: keep-all;
 }
 
@@ -516,8 +507,7 @@ img {
   font-size: 0.97rem;
   font-weight: 300;
   line-height: 1.72;
-  color: rgba(255, 255, 255, 0.82);
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.76);
   letter-spacing: 0.01em;
   word-break: keep-all;
 }
@@ -2669,13 +2659,6 @@ img {
 
   .mobile-menu-btn {
     display: block;
-  }
-
-  .hero-art-bg {
-    background-position: 52% center;
-    background-image: 
-      linear-gradient(to bottom, rgba(14, 18, 24, 0.85) 0%, rgba(14, 18, 24, 0.68) 50%, rgba(14, 18, 24, 0.42) 100%),
-      url('assets/images/솔아문학예술관_메인배경.jpg');
   }
 
   .hero-art-content {

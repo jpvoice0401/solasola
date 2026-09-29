@@ -1236,16 +1236,18 @@ function getSubpageHTML(main, sub) {
 
           <div class="visual-gallery-grid photo-archive-grid" style="grid-template-columns: repeat(2, 1fr); gap: 28px;">
             
-            <!-- 1. 박영근 시인 초상 -->
-            <div class="visual-gallery-card" data-lightbox="assets/images/박영근.jpg" data-caption="박영근 시인 생전 모습 (1958~2006)">
+            <!-- 1. 박영근 시인 초상화 (유종회 작가 作) -->
+            <div class="visual-gallery-card" data-lightbox="assets/images/박영근_초상화_유종회.jpg" data-caption="박영근 시인 초상화 (유종회 작가 作) — 노동문학의 개척자를 넘어 서정과 산문, 생명의 깊이를 노래한 시인의 문학혼을 기리며">
               <div class="visual-img-container" style="height: 380px;">
-                <img src="assets/images/박영근.jpg" alt="박영근 시인">
+                <img src="assets/images/박영근_초상화_유종회.jpg" alt="박영근 시인 초상화 (유종회 작가 作)" style="object-fit: cover; object-position: center 25%;">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>
               <div class="visual-card-body">
                 <div class="visual-card-tag">PORTRAIT</div>
-                <div class="visual-card-title">박영근 시인 초상</div>
-                <div class="visual-card-desc">한국 노동문학의 개척자 박영근</div>
+                <div class="visual-card-title">박영근 시인 초상화 (유종회 작가 作)</div>
+                <div class="visual-card-desc" style="line-height: 1.7; word-break: keep-all;">
+                  유종회 화백이 화폭에 담아낸 시인 박영근. 한국 노동문학의 개척자를 넘어, 존재와 생명을 노래한 깊은 서정시와 치열한 산문에 이르기까지 새롭게 재조명되어야 할 시인의 올곧은 문학혼과 체취를 전합니다.
+                </div>
               </div>
             </div>
 

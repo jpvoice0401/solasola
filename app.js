@@ -1233,8 +1233,9 @@ function getSubpageHTML(main, sub) {
             사진을 클릭하시면 고화질 원본으로 크게 확대하여 감상하실 수 있습니다. (라이트박스 뷰어 지원)
           </p>
 
-          <div class="visual-gallery-grid" style="grid-template-columns: repeat(3, 1fr);">
+          <div class="visual-gallery-grid" style="grid-template-columns: repeat(2, 1fr);">
             
+            <!-- 4. 박영근 시인 초상 (이미지 추후 교체 예정) -->
             <div class="visual-gallery-card" data-lightbox="assets/images/박영근.jpg" data-caption="박영근 시인 생전 모습 (1958~2006)">
               <div class="visual-img-container">
                 <img src="assets/images/박영근.jpg" alt="박영근 시인">
@@ -1247,6 +1248,7 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
+            <!-- 5. 부천 박영근 시비 (이미지 추후 교체 예정) -->
             <div class="visual-gallery-card" data-lightbox="assets/images/박영근시비.jpg" data-caption="부천 박영근 친필 각석 시비">
               <div class="visual-img-container">
                 <img src="assets/images/박영근시비.jpg" alt="부천 박영근 시비">
@@ -1259,30 +1261,7 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
-            <div class="visual-gallery-card" data-lightbox="assets/images/조찬준, 최병수, 박영근.jpg" data-caption="박영근 시인과 문화예술 동지들 (조찬준, 최병수 작가)">
-              <div class="visual-img-container">
-                <img src="assets/images/조찬준, 최병수, 박영근.jpg" alt="동지들">
-                <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-              </div>
-              <div class="visual-card-body">
-                <div class="visual-card-tag">HISTORICAL</div>
-                <div class="visual-card-title">예술 동지들과의 한때</div>
-                <div class="visual-card-desc">조찬준, 최병수 작가와 함께</div>
-              </div>
-            </div>
-
-            <div class="visual-gallery-card" data-lightbox="assets/images/솔아문학예술관.png" data-caption="솔아문학예술관 본관 외관 전경">
-              <div class="visual-img-container">
-                <img src="assets/images/솔아문학예술관.png" alt="문학관 전경" onerror="this.src='assets/images/sola_building_facade.png'">
-                <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
-              </div>
-              <div class="visual-card-body">
-                <div class="visual-card-tag">ARCHITECTURE</div>
-                <div class="visual-card-title">솔아문학예술관 본관</div>
-                <div class="visual-card-desc">전북특별자치도 부안군 변산면 산기길 10</div>
-              </div>
-            </div>
-
+            <!-- 3. 솔아문학 공식 심볼 (순서 변경: 3번째 위치) -->
             <div class="visual-gallery-card" data-lightbox="assets/images/솔아.png" data-caption="솔아문학예술 공식 엠블럼">
               <div class="visual-img-container" style="background: #ffffff;">
                 <img src="assets/images/솔아.png" alt="솔아 엠블럼" style="object-fit: contain; padding: 20px;">
@@ -1295,15 +1274,16 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
-            <div class="visual-gallery-card" data-lightbox="assets/images/솔아문학예술관.png" data-caption="박지현 갤러리 생태미술 전시실">
-              <div class="visual-img-container" style="background: #ffffff; height: 240px;">
-                <img src="assets/images/솔아문학예술관.png" alt="박지현 갤러리" onerror="this.src='assets/images/sola_building_facade.png'">
+            <!-- 솔아문학예술관 본관 -->
+            <div class="visual-gallery-card" data-lightbox="assets/images/솔아문학예술관.png" data-caption="솔아문학예술관 본관 외관 전경">
+              <div class="visual-img-container">
+                <img src="assets/images/솔아문학예술관.png" alt="문학관 전경" onerror="this.src='assets/images/sola_building_facade.png'">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>
               <div class="visual-card-body">
-                <div class="visual-card-tag">GALLERY SPACE</div>
-                <div class="visual-card-title">박지현 갤러리 내부</div>
-                <div class="visual-card-desc">2층 생태·환경 미술 전시 공간</div>
+                <div class="visual-card-tag">ARCHITECTURE</div>
+                <div class="visual-card-title">솔아문학예술관 본관</div>
+                <div class="visual-card-desc">전북특별자치도 부안군 변산면 산기길 10</div>
               </div>
             </div>
 

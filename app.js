@@ -1234,11 +1234,11 @@ function getSubpageHTML(main, sub) {
             사진을 클릭하시면 고화질 원본으로 크게 확대하여 감상하실 수 있습니다. (라이트박스 뷰어 지원)
           </p>
 
-          <div class="visual-gallery-grid" style="grid-template-columns: repeat(2, 1fr);">
+          <div class="visual-gallery-grid photo-archive-grid" style="grid-template-columns: repeat(2, 1fr); gap: 28px;">
             
-            <!-- 4. 박영근 시인 초상 (이미지 추후 교체 예정) -->
+            <!-- 1. 박영근 시인 초상 -->
             <div class="visual-gallery-card" data-lightbox="assets/images/박영근.jpg" data-caption="박영근 시인 생전 모습 (1958~2006)">
-              <div class="visual-img-container">
+              <div class="visual-img-container" style="height: 380px;">
                 <img src="assets/images/박영근.jpg" alt="박영근 시인">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>
@@ -1249,23 +1249,28 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
-            <!-- 5. 부천 박영근 시비 (이미지 추후 교체 예정) -->
-            <div class="visual-gallery-card" data-lightbox="assets/images/박영근시비.jpg" data-caption="부천 박영근 친필 각석 시비">
-              <div class="visual-img-container">
-                <img src="assets/images/박영근시비.jpg" alt="부천 박영근 시비">
+            <!-- 2. 솔아문학예술관 박영근 시비 -->
+            <div class="visual-gallery-card" data-lightbox="assets/images/시비2.jpg" data-caption="솔아문학예술관 박영근 친필 시비 「솔아 솔아 푸른 솔아」 (후원: 남성 203 동창회 - 남성중학교 20회, 남성고등학교 23회)">
+              <div class="visual-img-container" style="height: 380px;">
+                <img src="assets/images/시비2.jpg" alt="솔아문학예술관 박영근 시비" style="object-fit: cover; object-position: center center;">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>
               <div class="visual-card-body">
                 <div class="visual-card-tag">MONUMENT</div>
-                <div class="visual-card-title">부천 박영근 시비</div>
-                <div class="visual-card-desc">경기도 부천에 건립된 친필 각석 시비</div>
+                <div class="visual-card-title">솔아문학예술관 박영근 시비</div>
+                <div class="visual-card-desc" style="line-height: 1.7; word-break: keep-all;">
+                  솔아문학예술관 야외 박영근 친필 각석 시비 (대표시 「솔아 솔아 푸른 솔아」 수록)<br>
+                  <span style="display: inline-block; margin-top: 6px; color: var(--accent-orange); font-weight: 600;">
+                    <i class="fa-solid fa-seedling" style="margin-right: 4px;"></i> 후원 : 남성 203 동창회 (남성중학교 20회, 남성고등학교 23회)
+                  </span>
+                </div>
               </div>
             </div>
 
             <!-- 3. 솔아문학예술 공식 워드마크 -->
             <div class="visual-gallery-card" data-lightbox="assets/images/솔아.png" data-caption="솔아문학예술 공식 워드마크">
-              <div class="visual-img-container" style="background: #ffffff;">
-                <img src="assets/images/솔아.png" alt="솔아문학예술 공식 워드마크" style="object-fit: contain; padding: 20px;">
+              <div class="visual-img-container" style="background: #ffffff; height: 380px; display: flex; align-items: center; justify-content: center;">
+                <img src="assets/images/솔아.png" alt="솔아문학예술 공식 워드마크" style="object-fit: contain; max-height: 75%; padding: 24px;">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>
               <div class="visual-card-body">
@@ -1277,9 +1282,9 @@ function getSubpageHTML(main, sub) {
               </div>
             </div>
 
-            <!-- 솔아문학예술관 본관 -->
+            <!-- 4. 솔아문학예술관 본관 -->
             <div class="visual-gallery-card" data-lightbox="assets/images/솔아문학예술관.png" data-caption="솔아문학예술관 본관 외관 전경">
-              <div class="visual-img-container">
+              <div class="visual-img-container" style="height: 380px;">
                 <img src="assets/images/솔아문학예술관.png" alt="문학관 전경" onerror="this.src='assets/images/sola_building_facade.png'">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
               </div>

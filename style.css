@@ -1649,6 +1649,20 @@ img {
   box-shadow: var(--shadow-medium);
 }
 
+.photo-archive-grid .visual-img-container {
+  height: 380px;
+}
+
+@media (max-width: 768px) {
+  .photo-archive-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .photo-archive-grid .visual-img-container {
+    height: 280px !important;
+  }
+}
+
 .visual-img-container {
   position: relative;
   width: 100%;

@@ -1,0 +1,2859 @@
+/* ==========================================================================
+   솔아문학예술 (SOLA ARTS & LITERATURE / PARK YOUNG-GEUN FOUNDATION)
+   박서보재단(Park Seo-Bo Foundation) 스타일의 모던 갤러리 & 뮤지엄 디자인 시스템
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Noto+Serif+KR:wght@300;400;600;700;900&family=Outfit:wght@300;400;500;600;700;800&family=Pretendard:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Park Seo-Bo Foundation Minimalist Color Tokens */
+  --bg-main: #ffffff;
+  --bg-subtle: #f8f8f7;
+  --bg-dark: #121212;
+  --bg-dark-surface: #1e1e1e;
+  
+  --text-primary: #111111;
+  --text-secondary: #555555;
+  --text-muted: #888888;
+  --text-light: #ffffff;
+  --text-light-muted: rgba(255, 255, 255, 0.7);
+
+  --accent-gold: #c59b27;
+  --accent-orange: #df692a;
+  --accent-pine: #1b4332;
+  --accent-pine-light: #2d6a4f;
+
+  --border-light: #e8e8e6;
+  --border-dark: #2a2a2a;
+  --border-active: #111111;
+
+  /* Typography */
+  --font-serif: 'Noto Serif KR', 'Batang', serif;
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, 'SUITE', sans-serif;
+  --font-display: 'Outfit', 'Cinzel', sans-serif;
+  --font-en: 'Outfit', sans-serif;
+
+  /* Elevations & Transitions */
+  --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
+  
+  --tr-fast: 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --tr-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout Measurements */
+  --max-width: 1380px;
+  --header-height: 88px;
+  --radius-xs: 2px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+}
+
+/* Reset & Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, div {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--tr-fast), opacity var(--tr-fast);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  transition: all var(--tr-fast);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+/* ==========================================================================
+   HEADER (Park Seo-Bo Foundation Style: Minimal, Spacious, Elegant)
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  height: var(--header-height);
+  transition: all var(--tr-smooth);
+}
+
+.site-header.scrolled {
+  height: 76px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow-subtle);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Brand Logo (Isolated '솔아' Calligraphy on Left + Refined Compact Text on Right) */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: opacity var(--tr-fast);
+}
+
+.brand-logo:hover {
+  opacity: 0.88;
+}
+
+.brand-calligraphy-wrap {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.brand-calligraphy-pure {
+  height: 46px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: height var(--tr-smooth);
+}
+
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 154px;
+  gap: 5.5px;
+  transition: width var(--tr-smooth);
+}
+
+.brand-title-graphic {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.brand-kr-sub-large {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: #111111;
+  line-height: 1;
+  transition: font-size var(--tr-smooth);
+}
+
+.brand-kr-sub-large span {
+  display: inline-block;
+}
+
+.site-header.scrolled .brand-calligraphy-pure,
+.site-header.scrolled .brand-calligraphy-wrap {
+  height: 40px;
+}
+
+.site-header.scrolled .brand-text-block {
+  width: 138px;
+  gap: 4px;
+}
+
+.site-header.scrolled .brand-kr-sub-large {
+  font-size: 0.86rem;
+}
+
+@media (max-width: 768px) {
+  .brand-calligraphy-pure,
+  .brand-calligraphy-wrap {
+    height: 34px;
+  }
+  .brand-text-block {
+    width: 120px;
+    gap: 3px;
+  }
+  .brand-kr-sub-large {
+    font-size: 0.76rem;
+  }
+}
+
+/* Navigation Links (Park Seo-Bo clean horizontal bar) */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+}
+
+.site-header.scrolled .nav-item {
+  height: 76px;
+}
+
+.nav-link {
+  font-family: var(--font-en);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  padding: 8px 0;
+  position: relative;
+  transition: color var(--tr-fast);
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--text-primary);
+  transition: width var(--tr-fast);
+}
+
+.nav-link:hover, .nav-item.active .nav-link {
+  color: var(--text-primary);
+}
+
+.nav-link:hover::after, .nav-item.active .nav-link::after {
+  width: 100%;
+}
+
+/* Dropdown Menu (Museum Luxury Minimal Style) */
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% - 6px);
+  left: -12px;
+  min-width: 240px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-light);
+  border-top: 2px solid var(--accent-gold);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 10px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1100;
+}
+
+.nav-item:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 22px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--tr-fast);
+  white-space: nowrap;
+  position: relative;
+}
+
+.dropdown-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: var(--accent-gold);
+  transition: width var(--tr-fast);
+}
+
+.dropdown-link:hover {
+  background: var(--bg-subtle);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding-left: 28px;
+}
+
+.dropdown-link:hover::before {
+  width: 3px;
+}
+
+/* Header Action Right */
+.nav-utilities {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.search-trigger-btn {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--text-primary);
+  border-radius: 50%;
+  transition: background var(--tr-fast);
+}
+
+.search-trigger-btn:hover {
+  background: var(--bg-subtle);
+}
+
+.btn-header-support {
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  background: var(--text-primary);
+  color: #ffffff;
+  border: 1px solid var(--text-primary);
+  transition: all var(--tr-fast);
+  white-space: nowrap;
+}
+
+.btn-header-support:hover {
+  background: #333333;
+  border-color: #333333;
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   HERO SECTION (Art Foundation / Cinematic Aesthetic)
+   ========================================================================== */
+
+.hero-art-section {
+  position: relative;
+  min-height: 84vh;
+  background-color: var(--bg-dark);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-art-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(18, 18, 18, 0.92) 0%, rgba(18, 18, 18, 0.7) 50%, rgba(18, 18, 18, 0.4) 100%),
+    url('assets/images/솔아문학예술관.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  filter: brightness(0.85) contrast(1.1);
+  transform: scale(1.02);
+  transition: transform 8s ease-out;
+}
+
+.hero-art-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.32fr 0.68fr;
+  gap: 52px;
+  align-items: center;
+  padding: 60px 0 95px;
+}
+
+.hero-foundation-tag {
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hero-foundation-tag::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent-gold);
+}
+
+.hero-main-title {
+  font-family: var(--font-serif);
+  font-size: 3.1rem; /* 80% scale refinement */
+  font-weight: 800;
+  line-height: 1.42;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: #ffffff;
+  word-break: keep-all;
+}
+
+.hero-title-en {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.65;
+  color: var(--text-light-muted);
+  text-transform: uppercase;
+  margin-top: 18px;
+}
+
+.hero-quote-lead {
+  margin-bottom: 36px;
+  max-width: 700px;
+  border-left: 2px solid var(--accent-gold);
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-lead-ko {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  word-break: keep-all;
+}
+
+.hero-lead-en {
+  font-family: var(--font-sans);
+  font-size: 0.97rem;
+  font-weight: 300;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.76);
+  letter-spacing: 0.01em;
+  word-break: keep-all;
+}
+
+.hero-buttons-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-foundation-solid {
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  background: #ffffff;
+  color: var(--text-primary);
+  border: 1px solid #ffffff;
+  transition: all var(--tr-fast);
+  white-space: nowrap;
+}
+
+.btn-foundation-solid:hover {
+  background: var(--accent-gold);
+  color: #ffffff;
+  border-color: var(--accent-gold);
+}
+
+.btn-foundation-outline {
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all var(--tr-fast);
+  white-space: nowrap;
+}
+
+.btn-foundation-outline:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Right: Exhibition / Poet Card */
+.hero-art-card {
+  background: rgba(20, 20, 24, 0.45);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  max-width: 430px;
+  width: 100%;
+  justify-self: end;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-poet-visual-frame {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background: #0d1117;
+}
+
+.hero-poet-visual-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 78% 25%;
+  display: block;
+  transition: transform var(--tr-smooth);
+}
+
+.hero-art-card:hover .hero-poet-visual-img {
+  transform: scale(1.03);
+}
+
+.hero-poet-visual-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-poet-visual-badge .badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+}
+
+.hero-art-card-body {
+  padding: 38px 28px 26px;
+}
+
+.art-card-label {
+  font-family: var(--font-en);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.art-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: -0.32em;
+  margin-bottom: 14px;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  word-break: keep-all;
+}
+
+.art-card-text {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.95;
+  margin-bottom: 18px;
+}
+
+.poem-verse {
+  display: flex;
+  align-items: baseline;
+}
+
+.poem-quote {
+  display: inline-block;
+  width: 0.88em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.poem-quote-spacer {
+  display: inline-block;
+  width: 0.88em;
+  flex-shrink: 0;
+}
+
+.hero-card-poet-meta {
+  font-size: 0.84rem;
+  color: var(--accent-gold);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  padding-top: 17px;
+  margin-top: 34px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   MINIMAL GALLERY PILLARS (5 Pillars in Museum Style)
+   ========================================================================== */
+
+.museum-pillars-section {
+  border-bottom: 1px solid var(--border-light);
+  background: #ffffff;
+}
+
+.museum-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-left: 1px solid var(--border-light);
+}
+
+.museum-pillar-item {
+  padding: 44px 28px;
+  border-right: 1px solid var(--border-light);
+  transition: all var(--tr-fast);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 230px;
+  background: #ffffff;
+  position: relative;
+}
+
+.museum-pillar-item:hover {
+  background: var(--bg-subtle);
+}
+
+.pillar-num {
+  font-family: var(--font-en);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.pillar-item-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 14px 0 8px 0;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.pillar-item-sub {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+.pillar-item-arrow {
+  margin-top: 20px;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: transform var(--tr-fast);
+}
+
+.museum-pillar-item:hover .pillar-item-arrow {
+  transform: translateX(6px);
+  color: var(--accent-orange);
+}
+
+/* ==========================================================================
+   GALLERY SECTIONS & TITLES (80% Title Size & Clean 1-Line Right Text)
+   ========================================================================== */
+
+.gallery-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.gallery-section.bg-subtle {
+  background-color: var(--bg-subtle);
+}
+
+.gallery-section.bg-dark {
+  background-color: var(--bg-dark);
+  color: #ffffff;
+}
+
+.gallery-section-header {
+  margin-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 20px;
+  gap: 32px;
+}
+
+.bg-dark .gallery-section-header {
+  border-bottom-color: var(--border-dark);
+}
+
+.section-num-tag {
+  font-family: var(--font-en);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* 80% Scale of 2.8rem -> 2.24rem */
+.section-main-heading {
+  font-family: var(--font-serif);
+  font-size: 2.24rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.25;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+.bg-dark .section-main-heading {
+  color: #ffffff;
+}
+
+/* Right-side Description: Clean Single Line */
+.section-header-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: right;
+  line-height: 1.6;
+  word-break: keep-all;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-bottom: 4px;
+}
+
+.bg-dark .section-header-desc {
+  color: var(--text-light-muted);
+}
+
+/* ==========================================================================
+   INSIDE SOLA (Architectural Space 300-pyeong Showcase)
+   ========================================================================== */
+
+.space-curation-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: stretch;
+}
+
+.space-photo-gallery {
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  background: #0d1117;
+  height: 100%;
+  min-height: 520px;
+}
+
+.space-photo-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+  transition: transform var(--tr-smooth);
+}
+
+.space-photo-gallery:hover img {
+  transform: scale(1.03);
+}
+
+/* 상단 윗쪽 블러 처리로 자연스럽게 상단과 연결 */
+.space-photo-top-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 38%;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.45) 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.45) 55%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, transparent 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.space-photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+  color: #ffffff;
+  z-index: 3;
+}
+
+.space-photo-caption h4 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  margin-bottom: 4px;
+  word-break: keep-all;
+}
+
+.space-photo-caption p {
+  font-size: 0.88rem;
+  color: var(--accent-gold);
+  word-break: keep-all;
+}
+
+.space-selector-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.space-select-card {
+  padding: 26px;
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  cursor: pointer;
+  transition: all var(--tr-fast);
+}
+
+.space-select-card:hover, .space-select-card.active {
+  border-color: var(--text-primary);
+  box-shadow: var(--shadow-subtle);
+}
+
+.space-select-card.active {
+  border-left: 5px solid var(--accent-pine);
+  background: var(--bg-subtle);
+}
+
+.space-floor-code {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--accent-pine);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.space-card-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  word-break: keep-all;
+}
+
+.space-card-en {
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.space-card-detail {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   POETRY & EXHIBITION ROOM (대표시 10선 / Full Height Natural Display)
+   ========================================================================== */
+
+.poetry-gallery-frame {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  box-shadow: var(--shadow-medium);
+  align-items: start;
+}
+
+.poetry-sidebar {
+  border-right: 1px solid var(--border-light);
+  background: var(--bg-subtle);
+  padding: 32px 20px;
+  position: sticky;
+  top: 96px;
+}
+
+.poetry-sidebar-head {
+  font-family: var(--font-en);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.poetry-menu-btn {
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: var(--radius-xs);
+  transition: all var(--tr-fast);
+}
+
+.poetry-menu-btn:hover {
+  background: #ffffff;
+  color: var(--text-primary);
+}
+
+.poetry-menu-btn.active {
+  background: var(--text-primary);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.poetry-idx {
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+/* Full View without Inner Scrolling */
+.poetry-stage-view {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.poetry-header-block {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.poetry-category-badge {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.poetry-title-large {
+  font-family: var(--font-serif);
+  font-size: 2.1rem; /* 80% refinement */
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  word-break: keep-all;
+}
+
+.poetry-meta-pill-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.poetry-meta-pill {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: var(--bg-subtle);
+  padding: 4px 12px;
+  border: 1px solid var(--border-light);
+  white-space: nowrap;
+}
+
+.poetry-callout-quote {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-pine);
+  border-left: 3px solid var(--accent-pine);
+  padding: 12px 24px;
+  background: var(--bg-subtle);
+  line-height: 1.8;
+  font-style: italic;
+  word-break: keep-all;
+}
+
+.poetry-columns-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.poetry-text-col {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 2.25;
+  color: var(--text-primary);
+  white-space: pre-line;
+  background: #ffffff;
+  padding-right: 20px;
+}
+
+.poetry-curation-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 96px;
+}
+
+.curation-note-box {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  padding: 22px;
+}
+
+.curation-note-title {
+  font-family: var(--font-en);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-pine);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.curation-note-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   5-STAGE POETIC EVOLUTION (Numbered Timeline Cards)
+   ========================================================================== */
+
+.evolution-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.evolution-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 32px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all var(--tr-fast);
+  position: relative;
+}
+
+.evolution-card:hover {
+  border-color: var(--text-primary);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+}
+
+.evolution-num {
+  font-family: var(--font-en);
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--border-light);
+  line-height: 1;
+  margin-bottom: 14px;
+  transition: color var(--tr-fast);
+}
+
+.evolution-card:hover .evolution-num {
+  color: var(--accent-gold);
+}
+
+.evolution-stage-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  word-break: keep-all;
+}
+
+.evolution-period {
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+.evolution-work {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--accent-pine);
+  background: var(--bg-subtle);
+  padding: 8px 12px;
+  margin-bottom: 12px;
+  word-break: keep-all;
+  line-height: 1.45;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+}
+
+.evolution-card-bottom {
+  margin-top: 4px;
+}
+
+.evolution-spirit {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  margin-bottom: 6px;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.evolution-desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   BUAN LITERARY HERITAGE (4 Poets Monochrome Gallery)
+   ========================================================================== */
+
+.heritage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.heritage-card {
+  border: 1px solid var(--border-dark);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 36px 26px;
+  transition: all var(--tr-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.heritage-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-gold);
+}
+
+.heritage-era {
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.heritage-name {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 6px;
+  word-break: keep-all;
+}
+
+.heritage-role {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light-muted);
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-dark);
+  word-break: keep-all;
+}
+
+.heritage-desc {
+  font-size: 0.86rem;
+  color: var(--text-light-muted);
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   DUAL NEWS & PUBLICATIONS (Clean Grid)
+   ========================================================================== */
+
+.dual-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.showcase-block-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--text-primary);
+  margin-bottom: 28px;
+}
+
+.showcase-block-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  word-break: keep-all;
+}
+
+.showcase-view-more {
+  font-family: var(--font-en);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.showcase-view-more:hover {
+  color: var(--text-primary);
+}
+
+/* Clean News List */
+.clean-news-list {
+  list-style: none;
+}
+
+.clean-news-item {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: all var(--tr-fast);
+}
+
+.clean-news-item:hover {
+  padding-left: 10px;
+}
+
+.news-item-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.news-pill {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--text-primary);
+  color: #ffffff;
+  padding: 2px 8px;
+}
+
+.news-date {
+  font-family: var(--font-en);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.news-item-headline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+/* Book Grid Showcase */
+.books-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.foundation-book-card {
+  border: 1px solid var(--border-light);
+  padding: 18px;
+  display: flex;
+  gap: 16px;
+  transition: all var(--tr-fast);
+}
+
+.foundation-book-card:hover {
+  border-color: var(--text-primary);
+  box-shadow: var(--shadow-subtle);
+}
+
+.foundation-book-thumb {
+  width: 85px;
+  height: 118px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+}
+
+.book-meta-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.book-tag-small {
+  font-family: var(--font-en);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+}
+
+.book-title-bold {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 4px 0 6px 0;
+  word-break: keep-all;
+}
+
+.book-author-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   SUPPORT & DONATION BANNER (Gallery Minimal Style)
+   ========================================================================== */
+
+.museum-support-frame {
+  border: none;
+  background: var(--bg-subtle);
+  padding: 60px 50px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.support-copy-col h3 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+
+.support-copy-col p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 28px;
+  word-break: keep-all;
+}
+
+.bank-detail-panel {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 32px;
+  text-align: center;
+  box-shadow: var(--shadow-subtle);
+}
+
+.bank-label-text {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+
+.bank-number-bold {
+  font-family: var(--font-en);
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.bank-holder-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.btn-bank-copy {
+  font-family: var(--font-en);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 11px 26px;
+  background: var(--text-primary);
+  color: #ffffff;
+  border: 1px solid var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--tr-fast);
+  white-space: nowrap;
+}
+
+.btn-bank-copy:hover {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
+
+/* ==========================================================================
+   VIEW SWITCHING & SUBPAGE (Minimal Exhibition Style)
+   ========================================================================== */
+
+.page-view,
+#home-view {
+  display: none;
+}
+
+.page-view.active,
+#home-view.active {
+  display: block;
+}
+
+.subpage-view-container {
+  display: none;
+  padding: 30px 0 100px 0;
+  min-height: 80vh;
+}
+
+.subpage-view-container.active {
+  display: block;
+}
+
+.subpage-header-minimal {
+  padding: 44px 0 20px 0;
+  border-bottom: none;
+  margin-bottom: 28px;
+}
+
+.subpage-breadcrumbs {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 10px;
+}
+
+.subpage-title-main {
+  font-family: var(--font-serif);
+  font-size: 2.4rem; /* 80% scale */
+  font-weight: 900;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  word-break: keep-all;
+}
+
+.subpage-lead-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+/* Streamlined Subpage Tab Bar */
+.subpage-tab-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.subpage-tab-item {
+  font-family: var(--font-en);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 10px 20px;
+  border: none !important;
+  background: #f4f4f2;
+  color: var(--text-secondary);
+  transition: all var(--tr-fast);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.subpage-tab-item i {
+  color: var(--accent-gold);
+}
+
+.subpage-tab-item:hover {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  background: var(--bg-subtle);
+}
+
+.subpage-tab-item.active {
+  background: var(--text-primary);
+  color: #ffffff;
+  border-color: var(--text-primary);
+}
+
+.subpage-tab-item.active i {
+  color: var(--accent-gold);
+}
+
+.subpage-body-panel {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 10px 0 60px 0;
+  width: 100%;
+}
+
+/* ==========================================================================
+   IMAGE GALLERIES & VISUAL CARDS (Click to Zoom Lightbox)
+   ========================================================================== */
+
+.visual-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 28px 0;
+}
+
+.visual-gallery-card {
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  overflow: hidden;
+  transition: all var(--tr-smooth);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.visual-gallery-card:hover {
+  border-color: var(--text-primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.visual-img-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #000;
+}
+
+.visual-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visual-img-container img[src*="박영근.jpg"] {
+  object-position: 85% center;
+}
+
+.visual-gallery-card:hover .visual-img-container img {
+  transform: scale(1.06);
+}
+
+.visual-zoom-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity var(--tr-fast);
+}
+
+.visual-gallery-card:hover .visual-zoom-badge {
+  opacity: 1;
+}
+
+/* Space Overview Split: Image on Left, 3 Floor Info on Right */
+.space-overview-split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 32px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 32px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 768px) {
+  .space-overview-split {
+    grid-template-columns: 1fr !important;
+    padding: 20px !important;
+  }
+}
+
+.visual-card-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.visual-card-tag {
+  font-family: var(--font-en);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.visual-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  word-break: keep-all;
+}
+
+.visual-card-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* Lightbox Modal */
+.lightbox-modal-card {
+  background: #000000;
+  max-width: 960px;
+  width: 100%;
+  max-height: 92vh;
+  padding: 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-modal-card .foundation-modal-close {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  top: 14px;
+  right: 14px;
+}
+
+.lightbox-modal-card .foundation-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-img-wrapper {
+  max-width: 100%;
+  max-height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightbox-img-wrapper img {
+  max-width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 16px;
+  text-align: center;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   FORMS & INPUTS (Gallery Curation Style)
+   ========================================================================== */
+
+.form-group-gallery {
+  margin-bottom: 24px;
+}
+
+.form-label-gallery {
+  display: block;
+  font-family: var(--font-en);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.form-input-gallery {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border-light);
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: border-color var(--tr-fast);
+}
+
+.form-input-gallery:focus {
+  outline: none;
+  border-color: var(--text-primary);
+}
+
+/* ==========================================================================
+   FOOTER (Park Seo-Bo Foundation Minimalist Footer)
+   ========================================================================== */
+
+.site-footer-foundation {
+  background-color: var(--bg-dark);
+  color: var(--text-light-muted);
+  padding: 80px 0 40px 0;
+  border-top: 1px solid var(--border-dark);
+}
+
+.footer-top-row {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 80px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--border-dark);
+  margin-bottom: 36px;
+}
+
+.footer-brand-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.footer-brand-desc {
+  font-size: 0.88rem;
+  line-height: 1.8;
+  color: var(--text-light-muted);
+  margin-bottom: 20px;
+  word-break: keep-all;
+}
+
+.footer-contact-info {
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.8);
+  word-break: keep-all;
+}
+
+.footer-nav-col-title {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 18px;
+}
+
+.footer-nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav-link {
+  font-size: 0.88rem;
+  color: var(--text-light-muted);
+  transition: color var(--tr-fast);
+  white-space: nowrap;
+}
+
+.footer-nav-link:hover {
+  color: #ffffff;
+}
+
+.footer-bottom-copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: #777777;
+}
+
+/* ==========================================================================
+   VIEW SWITCHING (HOME vs SUBPAGE)
+   ========================================================================== */
+
+#home-view {
+  display: none;
+}
+
+#home-view.active {
+  display: block;
+}
+
+#subpage-view {
+  display: none;
+  background-color: var(--bg-main);
+  min-height: calc(100vh - var(--header-height) - 400px);
+  padding-bottom: 80px;
+}
+
+#subpage-view.active {
+  display: block;
+  animation: subpageFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes subpageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   SUBPAGE HEADER & TABS BAR
+   ========================================================================== */
+
+.subpage-header-minimal {
+  padding: 44px 0 20px 0;
+  border-bottom: none;
+  margin-bottom: 28px;
+}
+
+.subpage-breadcrumbs {
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.subpage-title-main {
+  font-family: var(--font-serif);
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.subpage-lead-desc {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 820px;
+}
+
+/* Subpage Tab Strip */
+.subpage-tab-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.subpage-tab-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #f4f4f2;
+  border: none !important;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--tr-fast);
+  border-radius: 4px;
+}
+
+.subpage-tab-item:hover {
+  background: #e8e8e4;
+  color: var(--text-primary);
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.subpage-tab-item.active {
+  background: var(--text-primary);
+  color: #ffffff;
+  border: none !important;
+}
+
+.subpage-tab-item.active i {
+  color: var(--accent-gold);
+}
+
+.subpage-body-panel {
+  padding: 10px 0 80px 0;
+  width: 100%;
+}
+
+/* ==========================================================================
+   POET BIOGRAPHY & EDITORIAL ARCHIVE (Seamless Full-Surface Architecture)
+   ========================================================================== */
+
+/* Subpage Section Headers */
+.subpage-section-header {
+  margin-top: 52px;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.subpage-section-tag {
+  font-family: var(--font-en);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.subpage-section-title {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.35;
+}
+
+.subpage-section-meta {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* Poet Bio Overview: Expansive Natural Flow (No Artificial Box Sections) */
+.poet-bio-hero-wrap {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.poet-bio-panorama-frame {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #111111;
+  cursor: pointer;
+  box-shadow: var(--shadow-medium);
+  margin-bottom: 32px;
+}
+
+.poet-bio-panorama-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+  transition: transform var(--tr-smooth);
+}
+
+.poet-bio-panorama-frame:hover img {
+  transform: scale(1.02);
+}
+
+.poet-panorama-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 30px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.45) 60%, transparent 100%);
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.poet-panorama-name {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.poet-panorama-years {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4px;
+}
+
+.poet-bio-narrative-flow {
+  max-width: 100%;
+}
+
+.poet-bio-badge {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: 0.16em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.poet-bio-title {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  line-height: 1.35;
+  word-break: keep-all;
+}
+
+.poet-bio-prose {
+  font-size: 1.02rem;
+  color: var(--text-secondary);
+  line-height: 2.1;
+  margin-bottom: 24px;
+  word-break: keep-all;
+}
+
+.poet-bio-meta-row-clean {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 36px;
+  margin-top: 24px;
+  padding: 18px 24px;
+  background: var(--bg-subtle);
+  border-left: 4px solid var(--accent-gold);
+}
+
+.poet-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.poet-meta-label {
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+.poet-meta-value {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Major Works Collection Grid: NO drop shadows, clean editorial plane */
+.poet-books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 50px;
+}
+
+.poet-book-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: none !important; /* Eliminate all drop shadow artifacts that cause messy section divisions */
+  transition: border-color var(--tr-fast), background-color var(--tr-fast);
+}
+
+.poet-book-card:hover {
+  border-color: var(--accent-orange);
+  background: #fafaf9;
+}
+
+.poet-book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.poet-book-type {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--accent-orange);
+  letter-spacing: 0.05em;
+}
+
+.poet-book-publisher {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.poet-book-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+}
+
+.poet-book-desc {
+  font-size: 0.89rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  word-break: keep-all;
+  margin-bottom: 18px;
+}
+
+.poet-book-footer {
+  padding-top: 14px;
+  border-top: 1px dashed var(--border-light);
+  margin-top: auto;
+}
+
+.poet-book-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--accent-orange);
+  text-decoration: none;
+  transition: opacity var(--tr-fast);
+}
+
+.poet-book-link:hover {
+  opacity: 0.8;
+}
+
+/* Chronology Timeline: Continuous flow, perfectly aligned */
+.poet-chronology-flow {
+  border-left: 2px solid var(--border-light);
+  padding-left: 32px;
+  margin-left: 12px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.poet-chrono-item {
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.poet-chrono-item:last-child {
+  margin-bottom: 0;
+}
+
+.poet-chrono-dot {
+  position: absolute;
+  left: -39px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-orange);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+.poet-chrono-year {
+  font-family: var(--font-en);
+  font-weight: 800;
+  font-size: 1.18rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.poet-chrono-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+/* ==========================================================================
+   VISUAL GALLERY CARDS & GRIDS
+   ========================================================================== */
+
+.visual-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.visual-gallery-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.visual-gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent-gold);
+}
+
+.visual-img-container {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  background: var(--bg-subtle);
+}
+
+.visual-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.visual-gallery-card:hover .visual-img-container img {
+  transform: scale(1.05);
+}
+
+.visual-zoom-badge {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #ffffff;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  backdrop-filter: blur(6px);
+  opacity: 0.85;
+  transition: all var(--tr-fast);
+}
+
+.visual-gallery-card:hover .visual-zoom-badge {
+  opacity: 1;
+  background: var(--accent-gold);
+  color: #ffffff;
+}
+
+.visual-card-body {
+  padding: 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.visual-card-tag {
+  font-family: var(--font-en);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.visual-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.visual-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   FORMS & BUTTONS
+   ========================================================================== */
+
+.form-group-gallery {
+  margin-bottom: 22px;
+}
+
+.form-label-gallery {
+  display: block;
+  font-family: var(--font-en);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.form-input-gallery {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-main);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: border-color var(--tr-fast), background var(--tr-fast);
+  outline: none;
+}
+
+.form-input-gallery:focus {
+  border-color: var(--accent-gold);
+  background: #ffffff;
+}
+
+.btn-bank-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--text-primary);
+  color: #ffffff;
+  border: none;
+  padding: 11px 24px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: background var(--tr-fast);
+}
+
+.btn-bank-copy:hover {
+  background: var(--accent-gold);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   MODALS & LIGHTBOX
+   ========================================================================== */
+
+.foundation-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--tr-fast);
+}
+
+.foundation-modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.foundation-modal-card {
+  background: #ffffff;
+  max-width: 660px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 44px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transform: translateY(20px);
+  transition: transform var(--tr-fast);
+}
+
+.foundation-modal-backdrop.open .foundation-modal-card {
+  transform: translateY(0);
+}
+
+.foundation-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background var(--tr-fast);
+}
+
+.foundation-modal-close:hover {
+  background: var(--bg-subtle);
+}
+
+/* Lightbox Modal Card */
+.lightbox-modal-card {
+  max-width: 1000px;
+  width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 24px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-modal-card .foundation-modal-close {
+  color: #ffffff;
+  top: 16px;
+  right: 16px;
+}
+
+.lightbox-modal-card .foundation-modal-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lightbox-img-wrapper {
+  max-height: 75vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightbox-img-wrapper img {
+  max-height: 75vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.lightbox-caption {
+  margin-top: 16px;
+  color: #ffffff;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .section-main-heading {
+    white-space: normal;
+  }
+  .section-header-desc {
+    white-space: normal;
+    text-align: left;
+  }
+  .gallery-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .museum-pillars-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .evolution-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .heritage-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    --header-height: 76px;
+  }
+  .nav-menu {
+    display: none;
+  }
+  .mobile-menu-btn {
+    display: block;
+  }
+  .hero-art-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 0;
+  }
+  .hero-main-title {
+    font-size: 2.6rem;
+  }
+  .space-curation-grid {
+    grid-template-columns: 1fr;
+  }
+  .space-photo-gallery {
+    height: 400px;
+    min-height: auto;
+  }
+  .poetry-gallery-frame {
+    grid-template-columns: 1fr;
+  }
+  .poetry-sidebar {
+    position: static;
+  }
+  .poetry-curation-col {
+    position: static;
+  }
+  .poetry-columns-grid {
+    grid-template-columns: 1fr;
+  }
+  .dual-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+  .museum-support-frame {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+  }
+  .footer-top-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .poet-bio-grid {
+    grid-template-columns: 260px 1fr;
+    gap: 32px;
+  }
+  .poet-books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+  .museum-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .evolution-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .heritage-grid {
+    grid-template-columns: 1fr;
+  }
+  .books-grid-row {
+    grid-template-columns: 1fr;
+  }
+  .hero-main-title {
+    font-size: 2.1rem;
+  }
+  .section-main-heading {
+    font-size: 1.8rem;
+  }
+  .poetry-stage-view {
+    padding: 28px 20px;
+  }
+  .footer-top-row {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom-copy {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  /* Mobile Poet Bio & Chronology */
+  .subpage-section-header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  .subpage-section-title {
+    font-size: 1.25rem;
+  }
+  .poet-bio-panorama-frame {
+    height: 320px;
+    margin-bottom: 24px;
+  }
+  .poet-panorama-overlay {
+    padding: 16px 20px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .poet-bio-meta-row-clean {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px 20px;
+  }
+  .poet-bio-meta-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .poet-books-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .poet-chronology-flow {
+    padding-left: 24px;
+    margin-left: 6px;
+  }
+  .poet-chrono-dot {
+    left: -30px;
+    width: 10px;
+    height: 10px;
+    top: 7px;
+  }
+  .poet-chrono-year {
+    font-size: 1.08rem;
+  }
+  .poet-chrono-desc {
+    font-size: 0.91rem;
+    line-height: 1.7;
+  }
+}
+
+
+
+/* Responsive & Borderless Polish across PC and Mobile */
+@media (max-width: 992px) {
+  .space-overview-split {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .unified-visit-hero {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .subpage-header-minimal {
+    padding: 24px 0 16px 0 !important;
+    margin-bottom: 20px !important;
+  }
+  .subpage-title-main {
+    font-size: 1.85rem !important;
+  }
+  .subpage-lead-desc {
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+  }
+  .subpage-tab-strip {
+    gap: 8px !important;
+    margin-bottom: 24px !important;
+  }
+  .subpage-tab-item {
+    padding: 8px 14px !important;
+    font-size: 0.85rem !important;
+  }
+  .full-canvas-wrapper {
+    padding: 0 16px !important;
+  }
+}
+
+
+/* Responsive Grid Utility Classes for Museum Pages */
+.space-floor-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.space-annex-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+.profile-responsive-grid {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.founder-profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 245px;
+  padding: 1px 0;
+}
+
+@media (max-width: 768px) {
+  .space-floor-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .space-annex-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .profile-responsive-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+  .founder-profile-info {
+    height: auto !important;
+    gap: 16px !important;
+    text-align: left !important;
+  }
+  .profile-responsive-grid > div:last-child {
+    text-align: left !important;
+  }
+}
+
+
+/* Space Specs Summary Strip */
+.space-specs-strip {
+  padding: 36px 0 20px 0;
+  border-top: 1px solid #f0f0ee;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+@media (max-width: 900px) {
+  .space-specs-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+@media (max-width: 520px) {
+  .space-specs-strip {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}

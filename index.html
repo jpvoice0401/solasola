@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PARK YOUNG-GEUN FOUNDATION · 솔아문학예술</title>
+  <meta name="description" content="솔아문학예술관 및 박영근기념사업 공식 웹사이트. 대한민국 최초의 노동시인 박영근의 문학정신 계승, 계간 『솔아문학』, 박영근문학상, 박정근문학연구소, 박지현갤러리.">
+  <meta name="keywords" content="솔아문학예술, 솔아문학, 박영근, 박영근시인, 솔아문학예술관, 박영근문학상, 박정근연구소, 박지현갤러리">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="PARK YOUNG-GEUN FOUNDATION · 솔아문학예술">
+  <meta property="og:description" content="“노동에서 인간으로, 현실에서 존재로” — 박영근 시인 추모 기념 문학관 & 계간 『솔아문학』">
+  <meta property="og:image" content="assets/images/박영근.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Icons & Fonts -->
+  <link rel="stylesheet" href="style.css?v=20260927_font1pt">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER (Park Seo-Bo Foundation Minimalist Style)
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      
+      <!-- Brand Logo (Pure '솔아' Calligraphy + Tightened '솔아문학예술관' Graphic + Justified '박영근시인기념관') -->
+      <a href="#home" class="brand-logo" id="brand-logo-btn" title="솔아문학예술관 · 박영근시인기념관">
+        <div class="brand-calligraphy-wrap">
+          <img src="assets/images/sola_calligraphy_clean.png" alt="솔아" class="brand-calligraphy-pure">
+        </div>
+        <div class="brand-text-block">
+          <img src="assets/images/sola_title_graphic_tight.png" alt="솔아문학예술관" class="brand-title-graphic">
+          <div class="brand-kr-sub-large" aria-label="박영근시인기념관">
+            <span>박</span><span>영</span><span>근</span><span>시</span><span>인</span><span>기</span><span>념</span><span>관</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu (4 Core Essential Categories) -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item" data-page="about">
+            <a href="about-greeting.html?v=20260925" class="nav-link" id="nav-about">ABOUT</a>
+            <ul class="nav-dropdown">
+              <li><a href="about-greeting.html?v=20260925" class="dropdown-link">인사말 & 설립이념</a></li>
+              <li><a href="about-space.html?v=20260925" class="dropdown-link">300평 공간 & 시설</a></li>
+              <li><a href="about-visit.html?v=20260925" class="dropdown-link">오시는 길 & 관람안내</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item" data-page="poet">
+            <a href="#poet" class="nav-link" id="nav-poet">PARK YOUNG-GEUN</a>
+            <ul class="nav-dropdown">
+              <li><a href="#poet/bio" class="dropdown-link" data-sub="bio">시인 생애와 연보</a></li>
+              <li><a href="#poet/poems" class="dropdown-link" data-sub="poems">대표시 10선 큐레이션</a></li>
+              <li><a href="#poet/journey" class="dropdown-link" data-sub="journey">문학 5단계 발전사</a></li>
+              <li><a href="#poet/books" class="dropdown-link" data-sub="books">시인 주요 저작</a></li>
+              <li><a href="#poet/monument" class="dropdown-link" data-sub="monument">시비 & '솔아' 노래</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item" data-page="archive">
+            <a href="#archive" class="nav-link" id="nav-archive">EXHIBITION & ARCHIVE</a>
+            <ul class="nav-dropdown">
+              <li><a href="#archive/exhibition" class="dropdown-link" data-sub="exhibition">상설 & 기획 전시</a></li>
+              <li><a href="#archive/publications" class="dropdown-link" data-sub="publications">도서 & 계간 『솔아문학』</a></li>
+              <li><a href="#archive/photo-archive" class="dropdown-link" data-sub="photo-archive">아카이브</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item" data-page="community">
+            <a href="#community" class="nav-link" id="nav-community">COMMUNITY & SUPPORT</a>
+            <ul class="nav-dropdown">
+              <li><a href="#community/notices" class="dropdown-link" data-sub="notices">공지사항 & 행사</a></li>
+              <li><a href="#community/donation" class="dropdown-link" data-sub="donation">솔아 후원회 안내</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav Utilities (Search, Support) -->
+      <div class="nav-utilities">
+        <button class="search-trigger-btn" id="btn-open-search" title="통합 검색" aria-label="검색">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button class="btn-header-support" id="btn-open-donation">
+          SUPPORT
+        </button>
+        <button class="mobile-menu-btn" id="btn-mobile-toggle" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================== -->
+  <main id="main-content">
+
+    <!-- VIEW 1: HOME PAGE (Museum / Foundation Art Direction) -->
+    <div id="home-view" class="page-view active">
+      
+      <!-- HERO ART SECTION -->
+      <section class="hero-art-section" id="hero">
+        <div class="hero-art-bg"></div>
+        <div class="container hero-art-content">
+          <div class="hero-art-text-col">
+            <div class="hero-foundation-tag">
+              PARK YOUNG-GEUN MEMORIAL LITERARY ARTS CENTER
+            </div>
+            <h1 class="hero-main-title">
+              노동에서 인간으로,<br>
+              현실에서 존재로
+              <span class="hero-title-en">FROM WORK TO HUMANITY,<br>FROM REALITY TO EXISTENCE</span>
+            </h1>
+            <div class="hero-quote-lead">
+              <p class="hero-lead-ko">
+                <span style="color: #ffd043; font-weight: 600;">대한민국 최초의 노동시인</span>이자 생명시인 박영근의 문학정신을 기리며,<br>
+                계간 『솔아문학』과 연구소·갤러리·출판을 아우르는 동시대 열린<br>
+                문화예술의 전당입니다.
+              </p>
+              <p class="hero-lead-en">
+                Dedicated to preserving the literary legacy of Park Young-geun, a pioneering Korean poet<br>
+                whose work gave voice to working life and explored the meaning of human existence,<br>
+                SOL-A is an open contemporary center for literature and the arts, encompassing<br>
+                the quarterly Sol-A Literature, a research institute, gallery, and publishing program.
+              </p>
+            </div>
+            <div class="hero-buttons-row">
+              <button class="btn-foundation-solid" id="hero-btn-explore" onclick="location.href='about-greeting.html?v=20260925'">
+                ABOUT SOL-A · 문학관 소개
+              </button>
+              <button class="btn-foundation-outline" id="hero-btn-memorial">
+                VIEW 10 POEMS · 대표시 10선
+              </button>
+            </div>
+          </div>
+
+          <!-- Hero Right Art Curation Card -->
+          <div class="hero-art-card">
+            <div class="hero-poet-visual-frame">
+              <img src="assets/images/박영근.jpg" alt="시인 박영근" class="hero-poet-visual-img" onerror="this.src='assets/images/박영근2.jpg'">
+              <div class="hero-poet-visual-badge">
+                <span class="badge-dot"></span> 시인 박영근 (1958 ~ 2006)
+              </div>
+            </div>
+            <div class="hero-art-card-body">
+              <div class="art-card-label">POETIC MANIFESTO · 대표시</div>
+              <h3 class="art-card-title">「솔아 솔아 푸른 솔아」</h3>
+              <div class="art-card-text">
+                <div class="poem-verse"><span class="poem-quote">“</span>솔아 솔아 푸른 솔아</div>
+                <div class="poem-verse"><span class="poem-quote-spacer"></span>샛바람에 떨지 마라</div>
+                <div class="poem-verse"><span class="poem-quote-spacer"></span>창살 아래 네가 묶인 곳</div>
+                <div class="poem-verse"><span class="poem-quote-spacer"></span>살아서 만나리라.”</div>
+              </div>
+              <div class="hero-card-poet-meta">
+                신동엽창작기금 · 제5회 백석문학상 수상 시인
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 CORE PILLARS (Clean Minimal Gallery Grid) -->
+      <section class="museum-pillars-section">
+        <div class="container" style="padding: 0;">
+          <div class="museum-pillars-grid" style="grid-template-columns: repeat(4, 1fr);">
+            
+            <div class="museum-pillar-item" onclick="location.href='about-greeting.html?v=20260925'">
+              <div>
+                <div class="pillar-num">01 / ABOUT</div>
+                <h3 class="pillar-item-title">솔아문학예술관</h3>
+                <p class="pillar-item-sub">설립이념, 300평 복합 공간·시설 및 오시는 길 안내</p>
+              </div>
+              <div class="pillar-item-arrow">EXPLORE <i class="fa-solid fa-arrow-right-long"></i></div>
+            </div>
+
+            <div class="museum-pillar-item" data-target="poet/bio">
+              <div>
+                <div class="pillar-num">02 / POET</div>
+                <h3 class="pillar-item-title">박영근 시인</h3>
+                <p class="pillar-item-sub">대표시 10선, 생애 연보, 문학 5단계 발전사와 시비 아카이브</p>
+              </div>
+              <div class="pillar-item-arrow">EXPLORE <i class="fa-solid fa-arrow-right-long"></i></div>
+            </div>
+
+            <div class="museum-pillar-item" data-target="archive/exhibition">
+              <div>
+                <div class="pillar-num">03 / ARCHIVE</div>
+                <h3 class="pillar-item-title">전시 & 아카이브</h3>
+                <p class="pillar-item-sub">유품전, 박지현 갤러리 미술전시, 계간 『솔아문학』 및 도서 출판</p>
+              </div>
+              <div class="pillar-item-arrow">EXPLORE <i class="fa-solid fa-arrow-right-long"></i></div>
+            </div>
+
+            <div class="museum-pillar-item" data-target="community/notices">
+              <div>
+                <div class="pillar-num">04 / COMMUNITY</div>
+                <h3 class="pillar-item-title">소식 & 참여</h3>
+                <p class="pillar-item-sub">공지사항 & 행사 소식 및 솔아 후원회 안내</p>
+              </div>
+              <div class="pillar-item-arrow">EXPLORE <i class="fa-solid fa-arrow-right-long"></i></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 01: INSIDE SOLA (Architectural Space Guide) -->
+      <section class="gallery-section bg-subtle" id="section-space">
+        <div class="container">
+          <div class="gallery-section-header">
+            <div>
+              <span class="section-num-tag">01 / ARCHITECTURE & SPACE</span>
+              <h2 class="section-main-heading">솔아문학예술관 공간 안내</h2>
+            </div>
+            <p class="section-header-desc">
+              전북특별자치도 부안군 변산면 산기길 10에 건립된 300평 규모의 복합 문화예술 거점입니다.
+            </p>
+          </div>
+
+          <div class="space-curation-grid">
+            <div class="space-photo-gallery">
+              <img src="assets/images/솔아문학예술관.png" alt="솔아문학예술관 전경" id="space-display-img" onerror="this.src='assets/images/sola_building_facade.png'">
+              <div class="space-photo-top-blur"></div>
+              <div class="space-photo-caption">
+                <h4 id="space-overlay-title">솔아문학예술관 전경</h4>
+                <p id="space-overlay-desc">1·2층 전시관 및 별채 예술인의 집, 야외 정원 전경</p>
+              </div>
+            </div>
+
+            <div class="space-selector-list" id="space-tabs-list">
+              <!-- Dynamically populated from siteData.spaces -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 02: POETRY & EXHIBITION ROOM (대표시 10선) -->
+      <section class="gallery-section" id="section-poems">
+        <div class="container">
+          <div class="gallery-section-header">
+            <div>
+              <span class="section-num-tag">02 / POET & MASTERPIECES</span>
+              <h2 class="section-main-heading">박영근 시인 대표시 10선</h2>
+            </div>
+            <p class="section-header-desc">
+              문학사적 영향력과 예술성을 갖춘 10편의 대표작 원문과 심층 해설을 감상하세요.
+            </p>
+          </div>
+
+          <div class="poetry-gallery-frame" id="poem-viewer">
+            <!-- Left Poem Index List -->
+            <div class="poetry-sidebar">
+              <div class="poetry-sidebar-head">INDEX OF POEMS (10)</div>
+              <div id="poem-sidebar-items">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Right Poem Curation Stage (No Inner Scrolling constraint) -->
+            <div class="poetry-stage-view" id="poem-display-pane">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 03: 5-STAGE POETIC EVOLUTION -->
+      <section class="gallery-section bg-subtle" id="section-stages">
+        <div class="container">
+          <div class="gallery-section-header">
+            <div>
+              <span class="section-num-tag">03 / POETIC TRAJECTORY</span>
+              <h2 class="section-main-heading">문학 5단계 발전사</h2>
+            </div>
+            <p class="section-header-desc">
+              “역사 → 노동 → 민중 → 생명 → 존재”로 심화되어 간 시인의 치열한 내면의 여정입니다.
+            </p>
+          </div>
+
+          <div class="evolution-cards-grid" id="stages-container">
+            <!-- Dynamically populated from siteData.fiveStages -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 04: BUAN 4 POETS LINEAGE (Dark Gallery Mode) -->
+      <section class="gallery-section bg-dark" id="section-lineage">
+        <div class="container">
+          <div class="gallery-section-header">
+            <div>
+              <span class="section-num-tag">04 / BUAN LITERARY HERITAGE</span>
+              <h2 class="section-main-heading">문향 부안, 네 시인의 찬란한 계보</h2>
+            </div>
+            <p class="section-header-desc">
+              조선 매창에서 신석정, 서정주, 그리고 박영근으로 이어지는 한국 시문학의 유장한 물줄기입니다.
+            </p>
+          </div>
+
+          <div class="heritage-grid" id="lineage-container">
+            <!-- Dynamically populated from siteData.buanLineage -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 05: NEWS & PUBLICATIONS -->
+      <section class="gallery-section" id="section-updates">
+        <div class="container">
+          <div class="dual-showcase-grid">
+            
+            <!-- Left: Notices -->
+            <div>
+              <div class="showcase-block-head">
+                <h3 class="showcase-block-title">공지사항 & 보도자료</h3>
+                <a href="#community/notices" class="showcase-view-more">VIEW ALL <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+              <ul class="clean-news-list" id="home-notice-list">
+                <!-- Dynamically populated -->
+              </ul>
+            </div>
+
+            <!-- Right: Publications -->
+            <div>
+              <div class="showcase-block-head">
+                <h3 class="showcase-block-title">도서출판 솔아 도서</h3>
+                <a href="#community/publishing" class="showcase-view-more">PUBLISHING <i class="fa-solid fa-arrow-right-long"></i></a>
+              </div>
+              <div class="books-grid-row" id="home-book-list">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 06: MEMBERSHIP & SUPPORT -->
+      <section class="gallery-section bg-subtle" style="padding-top: 0;">
+        <div class="container">
+          <div class="museum-support-frame">
+            <div class="support-copy-col">
+              <span class="section-num-tag">06 / MEMBERSHIP & DONATION</span>
+              <h3>솔아문학예술 후원회와 함께해 주세요</h3>
+              <p>
+                보내주시는 정성 어린 후원금은 박영근 시인의 문학 유산 보존, 계간 『솔아문학』 발간 및 박영근문학상 시상, 미래 청년 문학인 육성을 위해 투명하고 소중하게 사용됩니다.
+              </p>
+              <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <button class="btn-foundation-solid" id="btn-banner-donate">
+                  DONATION INFO · 후원 안내
+                </button>
+                <button class="btn-foundation-outline" style="color: var(--text-primary); border-color: var(--text-primary);" data-target="about/donation-info">
+                  후원금 사용 방향
+                </button>
+              </div>
+            </div>
+
+            <div class="bank-detail-panel">
+              <div class="bank-label-text">OFFICIAL DONATION ACCOUNT</div>
+              <div class="bank-number-bold">카카오뱅크 3333-3792-13817</div>
+              <div class="bank-holder-text">예금주 : 박정근 (솔아문학예술 대표)</div>
+              <button class="btn-bank-copy" id="btn-quick-copy">
+                <i class="fa-solid fa-copy"></i> 계좌번호 복사하기
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- VIEW 2: DYNAMIC SUBPAGE VIEW -->
+    <div id="subpage-view" class="subpage-view-container">
+      <div class="container">
+        <!-- Subpage Minimal Header -->
+        <div class="subpage-header-minimal">
+          <div class="subpage-breadcrumbs" id="subpage-crumbs">ABOUT > GREETING</div>
+          <h1 class="subpage-title-main" id="subpage-title">인사말</h1>
+          <p class="subpage-lead-desc" id="subpage-subtitle">솔아문학예술관과 계간 『솔아문학』의 설립 취지와 발걸음</p>
+        </div>
+
+        <!-- Subpage Navigation Tab Strip -->
+        <div class="subpage-tab-strip" id="subpage-tabs-bar">
+          <!-- Dynamically populated -->
+        </div>
+
+        <!-- Subpage Content Body Panel -->
+        <div class="subpage-body-panel" id="subpage-content-body">
+          <!-- Dynamically populated based on route -->
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==========================================================================
+       SITE FOOTER (Park Seo-Bo Foundation Minimalist Footer)
+       ========================================================================== -->
+  <footer class="site-footer-foundation">
+    <div class="container">
+      <div class="footer-top-row">
+        
+        <!-- Col 1: Foundation Info -->
+        <div>
+          <div class="footer-brand-title">솔아문학예술관</div>
+          <p class="footer-brand-desc">
+            “노동에서 인간으로, 현실에서 존재로” — 박영근시인기념관<br>
+            계간 『솔아문학』, 박정근문학예술연구소, 박지현갤러리를 운영하는 300평 규모의 복합 문화예술공간입니다.
+          </p>
+          <div class="footer-contact-info">
+            전북특별자치도 부안군 변산면 산기길 10<br>
+            공식 이메일 : sola_art@naver.com
+          </div>
+        </div>
+
+        <!-- Col 2: Official Account & Support -->
+        <div>
+          <div class="footer-nav-col-title">DONATION ACCOUNT</div>
+          <p style="font-size: 0.9rem; color: #ffffff; margin-bottom: 8px;">
+            카카오뱅크 <strong>3333-3792-13817</strong>
+          </p>
+          <p style="font-size: 0.85rem; color: var(--text-light-muted); margin-bottom: 18px;">
+            예금주: 박정근 (솔아문학예술)
+          </p>
+          <button class="btn-bank-copy" id="footer-btn-copy" style="font-size: 0.8rem; padding: 8px 16px;">
+            <i class="fa-solid fa-copy"></i> 계좌번호 복사
+          </button>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-copy">
+        <div>
+          © 2026 <strong>SOLA ARTS & LITERATURE CENTER</strong>. All Rights Reserved.
+        </div>
+        <div>
+          박영근 시인 추모 기념 문학관 | 계간 『솔아문학』 발행처 | 도서출판 솔아
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS (Search, Donation & Image Lightbox)
+       ========================================================================== -->
+
+  <!-- Modal: Search -->
+  <div class="foundation-modal-backdrop" id="modal-search">
+    <div class="foundation-modal-card">
+      <button class="foundation-modal-close" id="btn-close-search"><i class="fa-solid fa-xmark"></i></button>
+      <div style="font-family: var(--font-en); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.2em; color: var(--accent-gold); margin-bottom: 8px;">SEARCH ARCHIVE</div>
+      <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 24px; color: var(--text-primary);">
+        솔아문학예술 통합 검색
+      </h3>
+      <div class="form-group-gallery">
+        <input type="text" id="search-input" class="form-input-gallery" placeholder="시 제목, 시인, 문예지, 행사, 학술 논문 등을 입력하세요...">
+      </div>
+      <div id="search-results-box" style="max-height: 380px; overflow-y: auto;">
+        <p style="font-size: 0.9rem; color: var(--text-muted); text-align: center; padding: 40px 0;">
+          검색어를 입력하면 실시간으로 아카이브를 검색합니다.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Donation -->
+  <div class="foundation-modal-backdrop" id="modal-donation">
+    <div class="foundation-modal-card">
+      <button class="foundation-modal-close" id="btn-close-donation"><i class="fa-solid fa-xmark"></i></button>
+      <div style="font-family: var(--font-en); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.2em; color: var(--accent-gold); margin-bottom: 8px;">MEMBERSHIP & DONATION</div>
+      <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 16px; color: var(--text-primary);">
+        솔아문학예술 후원 안내
+      </h3>
+      <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 28px;">
+        한 사람의 시를 사랑한 수많은 분들의 마음 위에 세워진 문학관입니다.<br>
+        따뜻한 후원은 한국 문학의 지평을 넓히는 소중한 밑거름이 됩니다.
+      </p>
+
+      <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); padding: 28px; text-align: center; margin-bottom: 28px;">
+        <div style="font-family: var(--font-en); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.15em; color: var(--accent-gold); margin-bottom: 6px;">OFFICIAL DONATION ACCOUNT</div>
+        <div style="font-family: var(--font-en); font-size: 1.65rem; font-weight: 800; color: var(--text-primary); margin-bottom: 6px;">
+          카카오뱅크 3333-3792-13817
+        </div>
+        <div style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px;">
+          예금주 : 박정근 (솔아문학예술 대표)
+        </div>
+        <button class="btn-bank-copy" id="modal-btn-copy" style="margin: 0 auto;">
+          <i class="fa-solid fa-copy"></i> 계좌번호 복사하기
+        </button>
+      </div>
+
+      <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8;">
+        <h5 style="font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">후원금 사용 안내</h5>
+        <ul style="padding-left: 20px; margin-bottom: 16px;">
+          <li>계간 『솔아문학』 정기 발간 및 청년 작가 지원</li>
+          <li>박영근문학상 시상 및 정기 학술 세미나 개최</li>
+        </ul>
+        <p style="font-size: 0.82rem; color: var(--text-muted);">
+          ※ 후원 확인 및 기부 문의: sola_art@naver.com
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Image Lightbox (Visual Zoom) -->
+  <div class="foundation-modal-backdrop" id="modal-lightbox">
+    <div class="lightbox-modal-card">
+      <button class="foundation-modal-close" id="btn-close-lightbox"><i class="fa-solid fa-xmark"></i></button>
+      <div class="lightbox-img-wrapper">
+        <img id="lightbox-img" src="" alt="확대 이미지">
+      </div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="site-toast" style="position: fixed; bottom: 36px; left: 50%; transform: translateX(-50%) translateY(100px); background: #111111; color: #ffffff; padding: 14px 30px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 12px 30px rgba(0,0,0,0.3); z-index: 3000; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease; opacity: 0; pointer-events: none; border-left: 3px solid var(--accent-gold);">
+    알림 메시지
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="app.js?v=20260927_notices_reorder"></script>
+</body>
+</html>

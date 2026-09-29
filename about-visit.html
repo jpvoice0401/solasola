@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오시는 길 & 관람안내 · 솔아문학예술관 (PARK YOUNG-GEUN FOUNDATION)</title>
+  <link rel="stylesheet" href="style.css?v=20260927_transit_layout">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* Full-Screen Expansive Luxury Museum Layout */
+    .full-canvas-wrapper {
+      width: 100%;
+      max-width: 1720px;
+      margin: 0 auto;
+      padding: 0 max(32px, 3.5vw);
+    }
+    
+    /* Unified Architectural Panorama Hero (Seamless Combination) */
+    .unified-visit-hero {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 0;
+      background: #ffffff;
+      border: none;
+      box-shadow: none;
+      margin-bottom: 40px;
+      overflow: hidden;
+    }
+
+    .hero-photo-showcase {
+      position: relative;
+      background: #111111;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .hero-photo-showcase img {
+      width: 100%;
+      flex: 1;
+      height: 100%;
+      min-height: 0;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-photo-showcase:hover img {
+      transform: scale(1.03);
+    }
+    .hero-photo-caption {
+      height: 84px;
+      min-height: 84px;
+      box-sizing: border-box;
+      padding: 0 30px;
+      background: rgba(18, 18, 18, 0.88);
+      backdrop-filter: blur(10px);
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* Seamless Concierge Panel */
+    .hero-concierge-panel {
+      padding: 48px 48px 0 48px;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-left: none;
+      box-sizing: border-box;
+    }
+
+    .concierge-kicker {
+      font-family: var(--font-en);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .concierge-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.35;
+      margin-bottom: 12px;
+    }
+    .concierge-subtext {
+      font-size: 1.02rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 28px; /* Gap A: 28px */
+      word-break: keep-all;
+    }
+
+    .visit-specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 56px; /* Gap B: 56px (Exactly 2x of Gap A) */
+    }
+    .visit-specs-table tr {
+      border-bottom: 1px solid var(--border-light);
+    }
+    .visit-specs-table tr:last-child {
+      border-bottom: none;
+    }
+    .visit-specs-table th {
+      text-align: left;
+      padding: 18px 0;
+      font-weight: 700;
+      color: var(--text-primary);
+      font-size: 0.98rem;
+      width: 110px;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    .visit-specs-table td {
+      padding: 18px 0 18px 16px;
+      color: var(--text-secondary);
+      font-size: 1.02rem;
+      line-height: 1.7;
+      vertical-align: middle;
+      word-break: keep-all;
+    }
+
+    .pill-reservation-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-pine);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 2px;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+    }
+
+    .action-cta-cluster {
+      display: flex;
+      margin-top: 0;
+      width: 100%;
+    }
+    .cta-btn-main {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--text-primary);
+      color: #ffffff;
+      height: 84px;
+      min-height: 84px;
+      box-sizing: border-box;
+      padding: 0 24px;
+      font-weight: 700;
+      font-size: 0.96rem;
+      text-decoration: none;
+      transition: all var(--tr-fast);
+      border-radius: 4px 4px 0 0;
+    }
+    .cta-btn-main:hover {
+      background: var(--accent-gold);
+      color: #ffffff;
+    }
+    .cta-btn-outline {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #ffffff;
+      color: var(--text-primary);
+      border: 1px solid var(--border-light);
+      padding: 16px 24px;
+      font-weight: 700;
+      font-size: 0.96rem;
+      text-decoration: none;
+      transition: all var(--tr-fast);
+      border-radius: 2px;
+    }
+    .cta-btn-outline:hover {
+      background: var(--bg-subtle);
+      border-color: var(--text-primary);
+    }
+
+    /* Expansive Full-Width Transit Section */
+    .unified-transit-hub {
+      background: transparent;
+      border: none;
+      padding: 32px 0;
+      box-shadow: none;
+      margin-bottom: 40px;
+    }
+    .hub-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: none;
+      margin-bottom: 24px;
+    }
+    .transit-car-section {
+      margin-bottom: 52px;
+    }
+    .car-info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 18px;
+    }
+    .public-transit-split {
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .hub-col {
+      display: flex;
+      flex-direction: column;
+      padding-right: 0;
+      border-right: none;
+    }
+    .hub-col-badge {
+      font-family: var(--font-en);
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      color: var(--accent-gold);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .hub-col-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hub-col-desc {
+      font-size: 0.96rem;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      word-break: keep-all;
+    }
+
+    /* Unified Attractions Panorama */
+    .unified-attractions-hub {
+      background: transparent;
+      border: none;
+      padding: 32px 0;
+      box-shadow: none;
+    }
+    .attractions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .attraction-card {
+      background: #ffffff;
+      border: none;
+      padding: 28px 24px;
+      transition: all var(--tr-fast);
+      display: flex;
+      flex-direction: column;
+    }
+    .attraction-card:hover {
+      background: #ffffff;
+      border-color: var(--accent-gold);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (max-width: 1200px) {
+      .unified-visit-hero {
+        grid-template-columns: 1fr;
+      }
+      .hero-photo-showcase {
+        min-height: 420px;
+      }
+      .hero-concierge-panel {
+        border-left: none;
+        border-top: none;
+        padding: 36px 30px;
+      }
+      .attractions-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 900px) {
+      .car-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .public-transit-split {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .hub-col {
+        border-right: none;
+        padding-right: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+    }
+    @media (max-width: 640px) {
+      .full-canvas-wrapper {
+        padding: 0 16px;
+      }
+      .unified-transit-hub,
+      .unified-attractions-hub {
+        padding: 28px 20px;
+      }
+      .attractions-grid {
+        grid-template-columns: 1fr;
+      }
+      .action-cta-cluster {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container" style="max-width: 1720px; padding: 0 max(32px, 3.5vw);">
+      <a href="index.html#home" class="brand-logo" id="brand-logo-btn" title="솔아문학예술관 · 박영근시인기념관">
+        <div class="brand-calligraphy-wrap">
+          <img src="assets/images/sola_calligraphy_clean.png" alt="솔아" class="brand-calligraphy-pure">
+        </div>
+        <div class="brand-text-block">
+          <img src="assets/images/sola_title_graphic_tight.png" alt="솔아문학예술관" class="brand-title-graphic">
+          <div class="brand-kr-sub-large" aria-label="박영근시인기념관">
+            <span>박</span><span>영</span><span>근</span><span>시</span><span>인</span><span>기</span><span>념</span><span>관</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li class="nav-item active" data-page="about">
+            <a href="about-greeting.html?v=20260925" class="nav-link" id="nav-about">ABOUT</a>
+            <ul class="nav-dropdown">
+              <li><a href="about-greeting.html?v=20260925" class="dropdown-link">인사말 &amp; 설립이념</a></li>
+              <li><a href="about-space.html?v=20260925" class="dropdown-link">300평 공간 &amp; 시설</a></li>
+              <li><a href="about-visit.html?v=20260925" class="dropdown-link active" style="color: var(--accent-gold); font-weight: 700;">오시는 길 &amp; 관람안내</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item" data-page="poet">
+            <a href="index.html#poet" class="nav-link" id="nav-poet">PARK YOUNG-GEUN</a>
+            <ul class="nav-dropdown">
+              <li><a href="index.html#poet/bio" class="dropdown-link">시인 생애와 연보</a></li>
+              <li><a href="index.html#poet/poems" class="dropdown-link">대표시 10선 큐레이션</a></li>
+              <li><a href="index.html#poet/journey" class="dropdown-link">문학 5단계 발전사</a></li>
+              <li><a href="index.html#poet/books" class="dropdown-link">시인 주요 저작</a></li>
+              <li><a href="index.html#poet/monument" class="dropdown-link">시비 &amp; '솔아' 노래</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item" data-page="archive">
+            <a href="index.html#archive" class="nav-link" id="nav-archive">EXHIBITION &amp; ARCHIVE</a>
+            <ul class="nav-dropdown">
+              <li><a href="index.html#archive/exhibition" class="dropdown-link">상설 &amp; 기획 전시</a></li>
+              <li><a href="index.html#archive/publications" class="dropdown-link">도서 &amp; 계간 『솔아문학』</a></li>
+              <li><a href="index.html#archive/photo-archive" class="dropdown-link">아카이브</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item" data-page="community">
+            <a href="index.html#community" class="nav-link" id="nav-community">COMMUNITY &amp; SUPPORT</a>
+            <ul class="nav-dropdown">
+              <li><a href="index.html#community/notices" class="dropdown-link">공지사항 &amp; 행사</a></li>
+              <li><a href="index.html#community/donation" class="dropdown-link">솔아 후원회 안내</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav Utilities -->
+      <div class="nav-utilities">
+        <a href="index.html#community/donation" class="btn-header-support">SUPPORT</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN SUBPAGE CONTAINER (FULL-CANVAS EXPANSIVE LAYOUT) -->
+  <main style="background: var(--bg-main); padding-bottom: 90px;">
+    <div class="full-canvas-wrapper">
+      
+      <!-- Subpage Header Minimal (Full-Width Breath) -->
+      <div class="subpage-header-minimal" style="padding: 44px 0 20px 0; margin-bottom: 28px;">
+        <div class="subpage-breadcrumbs">ABOUT SOL-A &gt; VISIT &amp; LOCATION</div>
+        <h1 class="subpage-title-main" style="font-size: clamp(2.2rem, 3.5vw, 3.2rem);">오시는 길 &amp; 관람안내</h1>
+        <p class="subpage-lead-desc" style="max-width: 1200px; font-size: 1.12rem;">
+          서해 바다와 붉은 노을, 고사포 해송림이 품어 안은 솔아문학예술관 방문 및 교통편, 관람 요강 안내입니다.
+        </p>
+      </div>
+
+      <!-- Subpage Navigation Tab Strip -->
+      <div class="subpage-tab-strip" style="margin-bottom: 36px;">
+        <a href="about-greeting.html?v=20260925" class="subpage-tab-item">
+          <span>인사말 &amp; 설립이념</span>
+        </a>
+        <a href="about-space.html?v=20260925" class="subpage-tab-item">
+          <span>300평 공간 &amp; 시설</span>
+        </a>
+        <a href="about-visit.html?v=20260925" class="subpage-tab-item active">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>오시는 길 &amp; 관람안내</span>
+        </a>
+      </div>
+
+      <!-- 1. UNIFIED ARCHITECTURAL & VISITOR HERO PANORAMA -->
+      <div class="unified-visit-hero">
+        
+        <!-- Large Architectural Photo Showcase -->
+        <div class="hero-photo-showcase">
+          <img src="assets/images/솔아문학예술관.png" alt="솔아문학예술관 본관 및 야외 정원 전경" onerror="this.src='assets/images/sola_building_facade.png'">
+          <div class="hero-photo-caption">
+            <div>
+              <div style="font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: #ffffff;">솔아문학예술관 본관 및 야외 정원 전경</div>
+              <div style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.75); margin-top: 3px;">전북특별자치도 부안군 변산면 산기길 10</div>
+            </div>
+            <span style="font-family: var(--font-en); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; color: var(--accent-gold);">EXTERIOR PANORAMA</span>
+          </div>
+        </div>
+
+        <!-- Integrated Concierge & Core Specifications Panel -->
+        <div class="hero-concierge-panel">
+          <div>
+            <div class="concierge-kicker">SOLA LITERATURE &amp; ART MUSEUM</div>
+            <h2 class="concierge-title">솔아문학예술관 관람 요강</h2>
+            <p class="concierge-subtext">
+              쾌적하고 깊이 있는 문학적 사유를 제공하기 위해 관람은 <strong>사전 예약제</strong>로 운영됩니다.
+            </p>
+
+            <table class="visit-specs-table">
+              <tbody>
+                <tr>
+                  <th><i class="fa-solid fa-location-dot" style="color: var(--accent-gold); margin-right: 8px;"></i> 소재지 주소</th>
+                  <td><strong>전북특별자치도 부안군 변산면 산기길 10</strong></td>
+                </tr>
+                <tr>
+                  <th><i class="fa-solid fa-map-location-dot" style="color: #03c75a; margin-right: 8px;"></i> 네이버 지도</th>
+                  <td>
+                    <a href="https://naver.me/56XTl84T" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; color: #028a3e; font-weight: 700; text-decoration: none; padding: 6px 14px; background: #eefbf3; border: 1px solid #c2ebd0; border-radius: 4px; font-size: 0.95rem; transition: all 0.2s ease;" onmouseover="this.style.background='#dcf7e6'; this.style.borderColor='#9de2b4';" onmouseout="this.style.background='#eefbf3'; this.style.borderColor='#c2ebd0';" title="새 창에서 네이버 지도로 이동">
+                      <span>네이버 지도 바로가기 (길찾기)</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.8rem;"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <th><i class="fa-solid fa-calendar-check" style="color: var(--accent-pine); margin-right: 8px;"></i> 관람 시간</th>
+                  <td>
+                    <span class="pill-reservation-badge"><i class="fa-solid fa-clock"></i> 예약제</span>
+                    <span style="margin-left: 8px; font-size: 0.95rem; color: var(--text-secondary);">(사전 이메일 예약 접수)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th><i class="fa-solid fa-ticket" style="color: var(--accent-pine); margin-right: 8px;"></i> 관람료</th>
+                  <td><strong style="color: var(--accent-pine); font-size: 1.1rem;">전액 무료 (Free Admission)</strong></td>
+                </tr>
+                <tr>
+                  <th><i class="fa-solid fa-envelope" style="color: var(--accent-gold); margin-right: 8px;"></i> 공식 이메일</th>
+                  <td>
+                    <span onclick="copyEmailAddress(document.getElementById('btn-copy-email'))" style="cursor: pointer; display: inline-flex; align-items: center; gap: 8px;" title="클릭 시 이메일 주소 복사">
+                      <strong>sola_art@naver.com</strong>
+                      <i class="fa-regular fa-copy" style="font-size: 0.85rem; color: var(--accent-orange);" title="클릭하여 복사"></i>
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Direct Inquiry CTA Buttons: Click to Copy Email -->
+          <div class="action-cta-cluster">
+            <button type="button" id="btn-copy-email" class="cta-btn-main" onclick="copyEmailAddress(this)" style="width: 100%; height: 84px; min-height: 84px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; font-size: 1.05rem; padding: 0 24px; cursor: pointer; border: none; font-family: inherit; transition: all 0.25s ease; border-radius: 4px 4px 0 0;" title="클릭 시 sola_art@naver.com 이메일 주소가 복사됩니다">
+              <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.1rem;">
+                <i class="fa-solid fa-envelope" style="font-size: 1.15rem; color: var(--accent-gold);"></i>
+                <span>sola_art@naver.com</span>
+              </div>
+              <div style="font-size: 0.88rem; font-weight: 500; opacity: 0.88;">
+                이메일 관람 및 예약 문의
+              </div>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 2. FULL-WIDTH UNIFIED TRANSIT HUB -->
+      <div class="unified-transit-hub">
+        <div class="hub-header">
+          <div>
+            <div style="font-family: var(--font-en); font-size: 0.78rem; font-weight: 800; color: var(--accent-gold); letter-spacing: 0.18em; text-transform: uppercase;">
+              TRANSPORTATION &amp; ACCESS
+            </div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--text-primary); margin-top: 4px;">
+              솔아문학예술관 찾아오시는 길
+            </h3>
+          </div>
+          <div style="font-size: 0.92rem; color: var(--text-muted); font-family: var(--font-en);">TRANSIT &amp; SCHEDULE INFORMATION</div>
+        </div>
+
+        <!-- 대중교통 및 BUS TRANSIT SCHEDULE 교통편 안내 -->
+        <div class="public-transit-split">
+          
+          <!-- Left: 대중교통 -->
+          <div class="hub-col">
+            <div class="hub-col-badge">PUBLIC TRANSIT</div>
+            <h4 class="hub-col-title">
+              <i class="fa-solid fa-bus-simple" style="color: var(--accent-orange);"></i> 대중교통
+            </h4>
+            <div class="hub-col-desc">
+              <div style="margin-bottom: 20px;">
+                <p style="margin-bottom: 6px;"><strong style="color: var(--text-primary); font-size: 1rem;">• 철도(KTX / SRT) 이용:</strong></p>
+                <p><strong>정읍역</strong> 또는 <strong>김제역</strong> 하차 후 부안행 시외버스로 환승합니다.</p>
+              </div>
+              <div>
+                <p style="margin-bottom: 6px;"><strong style="color: var(--text-primary); font-size: 1rem;">• 시외버스 이용:</strong></p>
+                <p>전국 주요 고속·시외버스터미널에서 <strong>부안시외버스터미널</strong>로 이동합니다.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: BUS TRANSIT SCHEDULE 교통편 안내 (서울, 부안 ⇄ 마포 산기마을) -->
+          <div class="hub-col">
+            <div style="margin-bottom: 16px;">
+              <div class="hub-col-badge">BUS TRANSIT SCHEDULE</div>
+              <h4 class="hub-col-title" style="margin-bottom: 0;">
+                교통편 안내 (서울, 부안 ⇄ 마포 산기마을)
+              </h4>
+            </div>
+            
+            <div style="width: 100%; text-align: left;">
+              <div style="position: relative; max-width: 668px; border-radius: 4px; overflow: hidden; display: inline-block;">
+                <a href="assets/images/transit_guide_table.png" download="솔아문학예술관_교통편_시간표.png" title="클릭 시 시간표 이미지 다운로드" style="display: block; cursor: pointer;">
+                  <img src="assets/images/transit_guide_table.png" alt="교통편 (서울, 부안 - 마포 산기마을) 시간표" style="width: 100%; max-width: 668px; height: auto; display: block; border-radius: 4px;">
+                </a>
+                
+                <!-- ①번: 표 제목(교통편 서울, 부안 - 마포 산기마을) 우측 빈 공간에 배치되는 시간표 다운로드 버튼 -->
+                <a href="assets/images/transit_guide_table.png" download="솔아문학예술관_교통편_시간표.png" style="position: absolute; top: 10px; right: 18px; display: inline-flex; align-items: center; gap: 7px; background: #111111; color: #ffffff; padding: 7px 14px; font-weight: 700; font-size: 0.82rem; text-decoration: none; border-radius: 3px; transition: all 0.2s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 10;" onmouseover="this.style.background='var(--accent-gold)';" onmouseout="this.style.background='#111111';" title="시간표 원본 다운로드">
+                  <i class="fa-solid fa-download"></i> 시간표 다운로드
+                </a>
+              </div>
+              
+              <div style="margin-top: 12px; font-size: 0.84rem; color: var(--text-muted);">
+                <i class="fa-solid fa-circle-info" style="margin-right: 4px;"></i> 이미지를 클릭하거나 상단 버튼을 누르면 원본 시간표를 다운로드할 수 있습니다.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer-foundation">
+    <div class="container">
+      <div class="footer-top-row">
+        <div>
+          <div class="footer-brand-title">솔아문학예술관</div>
+          <p class="footer-brand-desc">
+            “노동에서 인간으로, 현실에서 존재로” — 박영근시인기념관<br>
+            계간 『솔아문학』, 박정근문학예술연구소, 박지현갤러리를 운영하는 300평 규모의 복합 문화예술공간입니다.
+          </p>
+          <div class="footer-contact-info">
+            전북특별자치도 부안군 변산면 산기길 10<br>
+            공식 이메일 : sola_art@naver.com
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-nav-col-title">DONATION ACCOUNT</div>
+          <p style="font-size: 0.9rem; color: #ffffff; margin-bottom: 8px;">
+            카카오뱅크 <strong>3333-3792-13817</strong>
+          </p>
+          <p style="font-size: 0.85rem; color: var(--text-light-muted); margin-bottom: 18px;">
+            예금주: 박정근 (솔아문학예술)
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-copy">
+        <div>© 2026 <strong>SOLA ARTS &amp; LITERATURE CENTER</strong>. All Rights Reserved.</div>
+        <div>박영근 시인 추모 기념 문학관 | 계간 『솔아문학』 발행처 | 도서출판 솔아</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function copyEmailAddress(btn) {
+      const email = 'sola_art@naver.com';
+      
+      function showSuccess() {
+        if (!btn) return;
+        const originalHTML = btn.innerHTML;
+        const originalBg = btn.style.backgroundColor;
+        const originalColor = btn.style.color;
+        
+        btn.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 1.08rem;">
+            <i class="fa-solid fa-check" style="color: #4ade80;"></i>
+            <span>sola_art@naver.com 복사 완료!</span>
+          </div>
+          <div style="font-size: 0.88rem; font-weight: 500; opacity: 0.9;">
+            클립보드에 이메일 주소가 복사되었습니다
+          </div>
+        `;
+        btn.style.backgroundColor = '#1b4332';
+        btn.style.color = '#ffffff';
+
+        let toast = document.getElementById('sola-copy-toast');
+        if (!toast) {
+          toast = document.createElement('div');
+          toast.id = 'sola-copy-toast';
+          toast.style.position = 'fixed';
+          toast.style.bottom = '32px';
+          toast.style.left = '50%';
+          toast.style.transform = 'translateX(-50%)';
+          toast.style.backgroundColor = 'rgba(26, 26, 26, 0.95)';
+          toast.style.color = '#ffffff';
+          toast.style.padding = '14px 28px';
+          toast.style.borderRadius = '30px';
+          toast.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.25)';
+          toast.style.fontSize = '0.95rem';
+          toast.style.fontWeight = '600';
+          toast.style.zIndex = '99999';
+          toast.style.display = 'flex';
+          toast.style.alignItems = 'center';
+          toast.style.gap = '10px';
+          toast.style.transition = 'opacity 0.3s ease';
+          document.body.appendChild(toast);
+        }
+        toast.innerHTML = '<i class="fa-solid fa-circle-check" style="color: #4ade80;"></i> sola_art@naver.com 주소가 클립보드에 복사되었습니다.';
+        toast.style.opacity = '1';
+        toast.style.visibility = 'visible';
+
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.style.backgroundColor = originalBg;
+          btn.style.color = originalColor;
+        }, 2200);
+
+        setTimeout(() => {
+          if (toast) {
+            toast.style.opacity = '0';
+            setTimeout(() => {
+              if (toast && toast.parentNode) toast.parentNode.removeChild(toast);
+            }, 300);
+          }
+        }, 2200);
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(showSuccess).catch(() => {
+          fallbackCopy(email);
+          showSuccess();
+        });
+      } else {
+        fallbackCopy(email);
+        showSuccess();
+      }
+    }
+
+    function fallbackCopy(text) {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+      } catch (err) {
+        console.error('Fallback copy failed', err);
+      }
+      document.body.removeChild(textArea);
+    }
+  </script>
+</body>
+</html>

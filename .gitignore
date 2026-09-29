@@ -1,0 +1,14 @@
+# Heavy source design files and drafts
+박영근/
+scratch/
+*.pdf
+*.hwp
+*.ai
+*.psd
+*.prproj
+*.mp4
+*_old_backup*
+
+# Python cache
+__pycache__/
+*.py[cod]

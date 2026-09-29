@@ -1250,7 +1250,7 @@ function getSubpageHTML(main, sub) {
             </div>
 
             <!-- 2. 솔아문학예술관 박영근 시비 -->
-            <div class="visual-gallery-card" data-lightbox="assets/images/시비2.jpg" data-caption="솔아문학예술관 박영근 친필 시비 「솔아 솔아 푸른 솔아」 (후원: 남성 203 동창회 - 남성중학교 20회, 남성고등학교 23회)">
+            <div class="visual-gallery-card" data-lightbox="assets/images/시비2.jpg" data-caption="솔아문학예술관 박영근 시비 「새야 새야」 (후원: 남성 203 동창회 - 남성중학교 20회, 남성고등학교 23회)">
               <div class="visual-img-container" style="height: 380px;">
                 <img src="assets/images/시비2.jpg" alt="솔아문학예술관 박영근 시비" style="object-fit: cover; object-position: center center;">
                 <span class="visual-zoom-badge"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
@@ -1259,7 +1259,7 @@ function getSubpageHTML(main, sub) {
                 <div class="visual-card-tag">MONUMENT</div>
                 <div class="visual-card-title">솔아문학예술관 박영근 시비</div>
                 <div class="visual-card-desc" style="line-height: 1.7; word-break: keep-all;">
-                  솔아문학예술관 야외 박영근 친필 각석 시비 (대표시 「솔아 솔아 푸른 솔아」 수록)<br>
+                  솔아문학예술관 야외 박영근 시비 (시 「새야 새야 — 백제·미지의 노래」 수록)<br>
                   <span style="display: inline-block; margin-top: 6px; color: var(--accent-orange); font-weight: 600;">
                     <i class="fa-solid fa-seedling" style="margin-right: 4px;"></i> 후원 : 남성 203 동창회 (남성중학교 20회, 남성고등학교 23회)
                   </span>

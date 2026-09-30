@@ -778,8 +778,12 @@ img {
    ========================================================================== */
 
 .gallery-section {
-  padding: 100px 0;
+  padding: 64px 0 80px;
   position: relative;
+}
+
+#section-space {
+  padding-top: 36px;
 }
 
 .gallery-section.bg-subtle {
@@ -792,12 +796,12 @@ img {
 }
 
 .gallery-section-header {
-  margin-bottom: 56px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   border-bottom: 1px solid var(--border-light);
-  padding-bottom: 20px;
+  padding-bottom: 18px;
   gap: 32px;
 }
 
@@ -2921,6 +2925,18 @@ img {
 
   .section-main-heading {
     font-size: 1.8rem;
+  }
+
+  .gallery-section {
+    padding: 44px 0 56px;
+  }
+
+  #section-space {
+    padding-top: 24px;
+  }
+
+  .gallery-section-header {
+    margin-bottom: 28px;
   }
 
   .poetry-stage-view {

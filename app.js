@@ -1,4 +1,4 @@
-import { siteData } from './data.js?v=20260927_notices_reorder';
+import { siteData } from './data.js?v=20260930_break';
 
 // Application State
 const state = {

@@ -211,7 +211,7 @@ export const siteData = {
       stage: "3단계",
       name: "성장기",
       period: "1987년",
-      work: "「대열」, 「솔아 솔아 푸르른 솔아」",
+      work: "「대열」,<br>「솔아 솔아 푸르른 솔아」",
       spirit: "연대와 공동체 의식",
       features: "민중의 삶과 노동운동,<br>1987년 6월항쟁과 노동자대투쟁의<br>시대정신 집약",
       icon: "🚩"

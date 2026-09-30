@@ -419,10 +419,10 @@ img {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(16, 18, 22, 0.93) 0%, rgba(16, 18, 22, 0.70) 32%, rgba(16, 18, 22, 0.05) 52%, transparent 68%),
-    url('assets/images/박영근시비_앞면.jpg?v=20261001_watercolor2');
+    linear-gradient(to right, rgba(16, 18, 22, 0.93) 0%, rgba(16, 18, 22, 0.70) 30%, rgba(16, 18, 22, 0.05) 50%, transparent 66%),
+    url('assets/images/박영근시비_앞면.jpg?v=20261001_left_shift');
   background-size: cover;
-  background-position: 55% bottom;
+  background-position: center bottom;
   z-index: 1;
   filter: brightness(1.01) contrast(1.0);
   transform: none;
@@ -2694,7 +2694,7 @@ img {
     background-position: center bottom;
     background-image: 
       linear-gradient(to bottom, rgba(16, 18, 22, 0.94) 0%, rgba(16, 18, 22, 0.78) 45%, rgba(16, 18, 22, 0.94) 100%),
-      url('assets/images/박영근시비_앞면.jpg?v=20261001_watercolor2');
+      url('assets/images/박영근시비_앞면.jpg?v=20261001_left_shift');
   }
 
   .hero-art-content {

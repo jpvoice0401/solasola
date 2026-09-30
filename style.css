@@ -407,7 +407,7 @@ img {
 
 .hero-art-section {
   position: relative;
-  min-height: 96vh;
+  min-height: 88vh;
   background-color: #ffffff;
   color: #ffffff;
   display: flex;
@@ -419,14 +419,23 @@ img {
   position: absolute;
   inset: 0;
   background-image: 
-    linear-gradient(to right, rgba(16, 18, 22, 0.94) 0%, rgba(16, 18, 22, 0.72) 32%, rgba(16, 18, 22, 0.05) 52%, transparent 68%),
-    url('assets/images/박영근시비_앞면.jpg?v=20260929_v4');
+    linear-gradient(to right, rgba(16, 18, 22, 0.93) 0%, rgba(16, 18, 22, 0.70) 32%, rgba(16, 18, 22, 0.05) 52%, transparent 68%),
+    url('assets/images/박영근시비_앞면.jpg?v=20260930_v5');
   background-size: cover;
   background-position: left center;
   z-index: 1;
-  filter: brightness(0.98) contrast(1.02);
+  filter: brightness(1.02) saturate(0.96) contrast(0.98);
   transform: scale(1.01);
   transition: transform 8s ease-out;
+}
+
+.hero-art-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 75% 36%, rgba(255, 252, 245, 0.08) 0%, rgba(245, 240, 230, 0.02) 45%, rgba(18, 22, 28, 0.12) 100%);
+  pointer-events: none;
+  mix-blend-mode: soft-light;
 }
 
 .hero-art-section .container {
@@ -440,7 +449,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 80px 0 140px;
+  padding: 70px 0 65px;
 }
 
 .hero-foundation-tag {
@@ -692,8 +701,12 @@ img {
    ========================================================================== */
 
 .museum-pillars-section {
+  position: relative;
+  z-index: 10;
   border-bottom: 1px solid var(--border-light);
   background: #ffffff;
+  margin-top: -24px;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.04);
 }
 
 .museum-pillars-grid {
@@ -703,14 +716,14 @@ img {
 }
 
 .museum-pillar-item {
-  padding: 44px 28px;
+  padding: 26px 24px 22px;
   border-right: 1px solid var(--border-light);
   transition: all var(--tr-fast);
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 230px;
+  min-height: 165px;
   background: #ffffff;
   position: relative;
 }
@@ -721,7 +734,7 @@ img {
 
 .pillar-num {
   font-family: var(--font-en);
-  font-size: 0.82rem;
+  font-size: 0.80rem;
   font-weight: 700;
   color: var(--text-muted);
   letter-spacing: 0.1em;
@@ -729,30 +742,30 @@ img {
 
 .pillar-item-title {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin: 14px 0 8px 0;
+  margin: 10px 0 6px 0;
   line-height: 1.35;
   word-break: keep-all;
 }
 
 .pillar-item-sub {
-  font-size: 0.84rem;
+  font-size: 0.83rem;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.55;
   word-break: keep-all;
 }
 
 .pillar-item-arrow {
-  margin-top: 20px;
-  font-size: 0.88rem;
+  margin-top: 14px;
+  font-size: 0.84rem;
   color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 8px;
   font-weight: 600;
-  transition: transform var(--tr-fast);
+  transition: transform var(--tr-fast), color var(--tr-fast);
 }
 
 .museum-pillar-item:hover .pillar-item-arrow {
@@ -2676,7 +2689,7 @@ img {
     background-position: center center;
     background-image: 
       linear-gradient(to bottom, rgba(16, 18, 22, 0.94) 0%, rgba(16, 18, 22, 0.78) 45%, rgba(16, 18, 22, 0.94) 100%),
-      url('assets/images/박영근시비_앞면.jpg?v=20260929_v4');
+      url('assets/images/박영근시비_앞면.jpg?v=20260930_v5');
   }
 
   .hero-art-content {
@@ -2703,6 +2716,11 @@ img {
 
   .museum-pillars-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .museum-pillar-item {
+    padding: 24px 22px 20px;
+    min-height: 155px;
   }
 
   .space-photo-gallery {
@@ -2801,8 +2819,17 @@ img {
     justify-content: center;
   }
 
+  .museum-pillars-section {
+    margin-top: 0;
+  }
+
   .museum-pillars-grid {
     grid-template-columns: 1fr;
+  }
+
+  .museum-pillar-item {
+    padding: 20px 18px 18px;
+    min-height: auto;
   }
 
   .evolution-cards-grid {

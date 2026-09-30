@@ -691,9 +691,11 @@ img {
   font-family: var(--font-sans);
   font-weight: 600;
   padding-top: 17px;
-  margin-top: 34px;
+  margin-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   letter-spacing: -0.01em;
+  line-height: 1.5;
+  word-break: keep-all;
 }
 
 /* ==========================================================================

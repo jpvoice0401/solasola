@@ -407,7 +407,7 @@ img {
 
 .hero-art-section {
   position: relative;
-  min-height: 88vh;
+  min-height: 94vh;
   background-color: #ffffff;
   color: #ffffff;
   display: flex;
@@ -420,12 +420,12 @@ img {
   inset: 0;
   background-image: 
     linear-gradient(to right, rgba(16, 18, 22, 0.93) 0%, rgba(16, 18, 22, 0.70) 32%, rgba(16, 18, 22, 0.05) 52%, transparent 68%),
-    url('assets/images/박영근시비_앞면.jpg?v=20260930_watercolor');
+    url('assets/images/박영근시비_앞면.jpg?v=20261001_monument_full');
   background-size: cover;
-  background-position: left center;
+  background-position: 55% bottom;
   z-index: 1;
   filter: brightness(1.01) contrast(1.0);
-  transform: scale(1.01);
+  transform: none;
   transition: transform 8s ease-out;
 }
 
@@ -707,8 +707,7 @@ img {
   z-index: 10;
   border-bottom: 1px solid var(--border-light);
   background: #ffffff;
-  margin-top: -24px;
-  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.04);
+  margin-top: 0;
 }
 
 .museum-pillars-grid {
@@ -2692,10 +2691,10 @@ img {
   }
 
   .hero-art-bg {
-    background-position: center center;
+    background-position: center bottom;
     background-image: 
       linear-gradient(to bottom, rgba(16, 18, 22, 0.94) 0%, rgba(16, 18, 22, 0.78) 45%, rgba(16, 18, 22, 0.94) 100%),
-      url('assets/images/박영근시비_앞면.jpg?v=20260930_watercolor');
+      url('assets/images/박영근시비_앞면.jpg?v=20261001_monument_full');
   }
 
   .hero-art-content {
